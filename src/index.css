@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ── BRAND PALETTE FROM MEMBERSHIP CARD ── */
+    /* Deep maroon background */
+    --background: 340 45% 96%;
+    --foreground: 340 60% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 340 60% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 60% 12%;
+
+    /* Gold accent = primary */
+    --primary: 42 85% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Deep maroon = secondary */
+    --secondary: 340 72% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 340 18% 90%;
+    --muted-foreground: 340 20% 45%;
+
+    --accent: 340 65% 30%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 65% 35%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* ── UPDATED BRAND PALETTE ── */
+    --primary-red:   #8B1E2D;   /* luxury red — primary */
+    --secondary-red: #B7323C;   /* rich red — secondary */
+    --gold:          #D4AF37;   /* gold accent */
+    --gold-hover:    #E6C65C;   /* hover gold */
+    --dark:          #1C1C1C;   /* dark background */
+    --light-bg:      #F7F3EB;   /* light warm background */
+    --white:         #FFFFFF;
+
+    /* Legacy aliases for compatibility */
+    --maroon:        #5C0F1A;
+    --maroon-mid:    #8B1E2D;
+    --maroon-rich:   #B7323C;
+    --maroon-bg:     #B7323C;
+    --gold-bright:   #D4AF37;
+    --gold-light:    #E6C65C;
+    --cream:         #F7F3EB;
+
+    /* Gradients */
+    --gradient-primary:  linear-gradient(135deg, #8B1E2D, #B7323C, #D4AF37);
+    --gradient-maroon:   linear-gradient(160deg, #5C0F1A 0%, #8B1E2D 40%, #B7323C 100%);
+    --gradient-gold:     linear-gradient(90deg, #D4AF37, #E6C65C, #D4AF37);
+    --gradient-card-bg:  linear-gradient(145deg, #8B1E2D 0%, #B7323C 55%, #8B1E2D 100%);
+
+    --border:  340 18% 82%;
+    --input:   340 18% 82%;
+    --ring:    42 85% 48%;
+    --radius:  0.75rem;
+
+    --shadow-card:       0 4px 20px -4px rgba(107,15,26,0.10);
+    --shadow-card-hover: 0 14px 36px -8px rgba(107,15,26,0.22);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground font-body; }
+  h1, h2, h3, h4, h5, h6 { @apply font-heading; }
+}
+
+@layer components {
+  .btn-gradient {
+    background: var(--gradient-maroon);
+    border: 1.5px solid var(--gold);
+    @apply text-white font-button font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-md;
+  }
+  .btn-gradient-lg {
+    background: var(--gradient-maroon);
+    border: 1.5px solid var(--gold);
+    @apply text-white font-button font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-lg text-lg;
+  }
+  .btn-gold {
+    background: var(--gradient-gold);
+    @apply text-foreground font-button font-bold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-md;
+  }
+  .section-title {
+    @apply font-heading font-bold text-3xl md:text-4xl lg:text-5xl;
+    color: var(--maroon);
+  }
+  .section-subtitle {
+    @apply font-body text-lg md:text-xl mt-3;
+    color: #7A3A45;
+  }
+  .art-card {
+    @apply bg-card rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2;
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(200,168,75,0.18);
+  }
+  .art-card:hover {
+    box-shadow: var(--shadow-card-hover);
+    border-color: rgba(200,168,75,0.45);
+  }
+  .icon-badge-red {
+    @apply p-3 rounded-xl w-fit mb-4;
+    background: rgba(107,15,26,0.10);
+  }
+  .icon-badge-red svg { color: var(--maroon-mid); }
+
+  /* Gold divider ornament */
+  .gold-divider {
+    display: flex; align-items: center; gap: 10px; justify-content: center;
+  }
+  .gold-divider::before,
+  .gold-divider::after {
+    content: ''; flex: 1; height: 1.5px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    max-width: 80px;
+  }
+}
+
+@layer utilities {
+  .hero-zoom {
+    animation: heroZoom 10s ease-in-out infinite alternate;
+  }
+  @keyframes heroZoom {
+    from { transform: scale(1); }
+    to   { transform: scale(1.05); }
+  }
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+  .animate-spin-slow { animation: spin-slow 1.2s linear infinite; }
+
+  /* Maroon tint utilities */
+  .bg-maroon     { background-color: var(--maroon); }
+  .bg-maroon-mid { background-color: var(--maroon-mid); }
+  .bg-maroon-rich{ background-color: var(--maroon-rich); }
+  .text-gold     { color: var(--gold-light); }
+  .border-gold   { border-color: var(--gold); }
+}
+
+/* ── Dark page overrides — section cards on maroon backgrounds ── */
+.page-dark .section-title { color: #F0D080 !important; }
+.page-dark .section-subtitle { color: rgba(255,220,170,0.75) !important; }
+.page-dark .art-card {
+  background: rgba(60,8,18,0.75) !important;
+  border: 1px solid rgba(200,168,75,0.22) !important;
+  backdrop-filter: blur(10px);
+}
+.page-dark .art-card:hover { border-color: rgba(200,168,75,0.5) !important; }
+.page-dark p, .page-dark span, .page-dark li { color: #FFFFFF; }
+.page-dark h1,.page-dark h2,.page-dark h3,.page-dark h4 { color: #fff; }
+
+/* ── PREMIUM GLOBAL ENHANCEMENTS ── */
+html { scroll-behavior: smooth; }
+* { box-sizing: border-box; }
+
+/* Smooth scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #1A0508; }
+::-webkit-scrollbar-thumb { background: linear-gradient(#8B1E2D, #D4AF37); border-radius: 3px; }
+
+/* Selection color */
+::selection { background: rgba(212,175,55,0.3); color: #FFFFFF; }
+
+/* Image rendering */
+img { max-width: 100%; }
+
+/* Smooth transitions */
+a, button { transition: all 0.22s ease; }
+
+/* Remove outline on buttons for aesthetics */
+button:focus-visible { outline: 2px solid rgba(212,175,55,0.6); outline-offset: 2px; }
