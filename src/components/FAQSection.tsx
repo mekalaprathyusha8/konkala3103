@@ -17,7 +17,7 @@ const faqs = [
   { q: "Do you offer online classes?", a: "Currently, we focus on in-person classes to provide hands-on experience. However, we occasionally conduct online workshops and sessions for students who cannot visit the academy." },
 ];
 
-const FAQSection = () => {
+const FAQSection = ({ hideHeader }: { hideHeader?: boolean } = {}) => {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
@@ -25,20 +25,22 @@ const FAQSection = () => {
       <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 4, background: "linear-gradient(90deg, transparent, #D4AF37 30%, #E6C65C 50%, #D4AF37 70%, transparent)" }} />
 
       <div className="container" style={{ maxWidth: 820, margin: "0 auto" }}>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}
-          style={{ textAlign: "center", marginBottom: "clamp(40px,6vh,60px)" }}
-        >
-          <span style={{ display: "inline-block", fontFamily: "Poppins, sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.3em", textTransform: "uppercase", color: "#8B1E2D", background: "rgba(139,30,45,0.08)", border: "1.5px solid rgba(139,30,45,0.2)", borderRadius: 50, padding: "5px 18px", marginBottom: 14 }}>
-            Common Questions
-          </span>
-          <h2 style={{ fontFamily: "Playfair Display, Georgia, serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", fontWeight: 900, color: "#5C0F1A", lineHeight: 1.2, marginBottom: 12 }}>
-            Frequently Asked <span style={{ background: "linear-gradient(135deg, #8B1E2D, #B7323C)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Questions</span>
-          </h2>
-          <p style={{ color: "#777", fontFamily: "Poppins, sans-serif", fontSize: "0.95rem", maxWidth: 480, margin: "0 auto" }}>
-            Everything you need to know about our courses, classes, and enrollment process.
-          </p>
-        </motion.div>
+        {!hideHeader && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}
+            style={{ textAlign: "center", marginBottom: "clamp(40px,6vh,60px)" }}
+          >
+            <span style={{ display: "inline-block", fontFamily: "Poppins, sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.3em", textTransform: "uppercase", color: "#8B1E2D", background: "rgba(139,30,45,0.08)", border: "1.5px solid rgba(139,30,45,0.2)", borderRadius: 50, padding: "5px 18px", marginBottom: 14 }}>
+              Common Questions
+            </span>
+            <h2 style={{ fontFamily: "Playfair Display, Georgia, serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", fontWeight: 900, color: "#5C0F1A", lineHeight: 1.2, marginBottom: 12 }}>
+              Frequently Asked <span style={{ background: "linear-gradient(135deg, #8B1E2D, #B7323C)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Questions</span>
+            </h2>
+            <p style={{ color: "#777", fontFamily: "Poppins, sans-serif", fontSize: "0.95rem", maxWidth: 480, margin: "0 auto" }}>
+              Everything you need to know about our courses, classes, and enrollment process.
+            </p>
+          </motion.div>
+        )}
 
         <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           {faqs.map((faq, i) => (

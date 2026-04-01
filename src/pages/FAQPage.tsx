@@ -15,7 +15,7 @@ const FAQPage = () => (
           highlight="Questions"
           subtitle="Everything you need to know about our courses, classes, and enrollment"
         />
-        <FAQSection />
+        <FAQSection hideHeader />
       </div>
     </PageWrapper>
     <Footer />

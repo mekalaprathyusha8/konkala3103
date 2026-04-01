@@ -35,36 +35,49 @@
     --destructive-foreground: 0 0% 100%;
 
     /* ── UPDATED BRAND PALETTE ── */
-    --primary-red:   #8B1E2D;   /* luxury red — primary */
-    --secondary-red: #B7323C;   /* rich red — secondary */
-    --gold:          #D4AF37;   /* gold accent */
-    --gold-hover:    #E6C65C;   /* hover gold */
-    --dark:          #1C1C1C;   /* dark background */
-    --light-bg:      #F7F3EB;   /* light warm background */
-    --white:         #FFFFFF;
+    --primary: #8B2E2E;
+    --primary-rgb: 139, 46, 46;
+    
+    --primary-dark: #4B1F1F;
+    --primary-dark-rgb: 75, 31, 31;
+    
+    --primary-light: #C0392B;
+    --primary-light-rgb: 192, 57, 43;
 
-    /* Legacy aliases for compatibility */
-    --maroon:        #5C0F1A;
-    --maroon-mid:    #8B1E2D;
-    --maroon-rich:   #B7323C;
-    --maroon-bg:     #B7323C;
-    --gold-bright:   #D4AF37;
-    --gold-light:    #E6C65C;
-    --cream:         #F7F3EB;
+    --secondary: #3A1F1F;
+    --secondary-rgb: 58, 31, 31;
+    
+    --secondary-light: #5A2A2A;
+    --secondary-light-rgb: 90, 42, 42;
+
+    --accent: #D4AF37;
+    --accent-rgb: 212, 175, 55;
+    
+    --accent-bright: #F1C40F;
+    --accent-bright-rgb: 241, 196, 15;
+
+    --white: #FFFFFF;
+    --white-rgb: 255, 255, 255;
+    
+    --gray-light: #E0E0E0;
+    --gray-light-rgb: 224, 224, 224;
+    
+    --text-dark: #1A1A1A;
+    --text-dark-rgb: 26, 26, 26;
 
     /* Gradients */
-    --gradient-primary:  linear-gradient(135deg, #8B1E2D, #B7323C, #D4AF37);
-    --gradient-maroon:   linear-gradient(160deg, #5C0F1A 0%, #8B1E2D 40%, #B7323C 100%);
-    --gradient-gold:     linear-gradient(90deg, #D4AF37, #E6C65C, #D4AF37);
-    --gradient-card-bg:  linear-gradient(145deg, #8B1E2D 0%, #B7323C 55%, #8B1E2D 100%);
+    --gradient-primary:  linear-gradient(135deg, var(--primary), var(--primary-light), var(--accent));
+    --gradient-secondary: linear-gradient(160deg, var(--primary-dark) 0%, var(--primary) 40%, var(--primary-light) 100%);
+    --gradient-gold:     linear-gradient(90deg, var(--accent), var(--accent-bright), var(--accent));
+    --gradient-card-bg:  linear-gradient(145deg, var(--secondary) 0%, var(--secondary-light) 100%);
 
     --border:  340 18% 82%;
     --input:   340 18% 82%;
     --ring:    42 85% 48%;
     --radius:  0.75rem;
 
-    --shadow-card:       0 4px 20px -4px rgba(107,15,26,0.10);
-    --shadow-card-hover: 0 14px 36px -8px rgba(107,15,26,0.22);
+    --shadow-card:       0 4px 20px -4px rgba(0,0,0,0.40);
+    --shadow-card-hover: 0 14px 36px -8px rgba(0,0,0,0.60);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -79,47 +92,56 @@
 
 @layer base {
   * { @apply border-border; }
-  body { @apply bg-background text-foreground font-body; }
-  h1, h2, h3, h4, h5, h6 { @apply font-heading; }
+  body { 
+    background-color: var(--secondary); 
+    color: var(--white); 
+    @apply font-body; 
+  }
+  h1, h2, h3, h4, h5, h6 { @apply font-heading text-white; }
 }
 
 @layer components {
   .btn-gradient {
-    background: var(--gradient-maroon);
-    border: 1.5px solid var(--gold);
-    @apply text-white font-button font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-md;
+    background: var(--gradient-secondary);
+    border: 1.5px solid var(--accent);
+    color: var(--white);
+    @apply font-button font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-md;
   }
   .btn-gradient-lg {
-    background: var(--gradient-maroon);
-    border: 1.5px solid var(--gold);
-    @apply text-white font-button font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-lg text-lg;
+    background: var(--gradient-secondary);
+    border: 1.5px solid var(--accent);
+    color: var(--white);
+    @apply font-button font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-lg text-lg;
   }
   .btn-gold {
     background: var(--gradient-gold);
-    @apply text-foreground font-button font-bold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-md;
+    color: var(--text-dark);
+    @apply font-button font-bold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-md;
   }
   .section-title {
     @apply font-heading font-bold text-3xl md:text-4xl lg:text-5xl;
-    color: var(--maroon);
+    color: var(--accent);
   }
   .section-subtitle {
     @apply font-body text-lg md:text-xl mt-3;
-    color: #7A3A45;
+    color: var(--gray-light);
   }
   .art-card {
-    @apply bg-card rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2;
+    background-color: var(--secondary-light);
+    color: var(--white);
+    @apply rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2;
     box-shadow: var(--shadow-card);
-    border: 1px solid rgba(200,168,75,0.18);
+    border: 1px solid rgba(var(--accent-rgb), 0.18);
   }
   .art-card:hover {
     box-shadow: var(--shadow-card-hover);
-    border-color: rgba(200,168,75,0.45);
+    border-color: rgba(var(--accent-rgb), 0.45);
   }
   .icon-badge-red {
     @apply p-3 rounded-xl w-fit mb-4;
-    background: rgba(107,15,26,0.10);
+    background: rgba(var(--primary-dark-rgb), 0.20);
   }
-  .icon-badge-red svg { color: var(--maroon-mid); }
+  .icon-badge-red svg { color: var(--accent); }
 
   /* Gold divider ornament */
   .gold-divider {
@@ -128,7 +150,7 @@
   .gold-divider::before,
   .gold-divider::after {
     content: ''; flex: 1; height: 1.5px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
     max-width: 80px;
   }
 }
@@ -148,24 +170,13 @@
   .animate-spin-slow { animation: spin-slow 1.2s linear infinite; }
 
   /* Maroon tint utilities */
-  .bg-maroon     { background-color: var(--maroon); }
-  .bg-maroon-mid { background-color: var(--maroon-mid); }
-  .bg-maroon-rich{ background-color: var(--maroon-rich); }
-  .text-gold     { color: var(--gold-light); }
-  .border-gold   { border-color: var(--gold); }
+  .bg-primary     { background-color: var(--primary); }
+  .bg-primary-dark { background-color: var(--primary-dark); }
+  .bg-secondary   { background-color: var(--secondary); }
+  .text-accent    { color: var(--accent); }
+  .text-accent-bright { color: var(--accent-bright); }
+  .border-accent  { border-color: var(--accent); }
 }
-
-/* ── Dark page overrides — section cards on maroon backgrounds ── */
-.page-dark .section-title { color: #F0D080 !important; }
-.page-dark .section-subtitle { color: rgba(255,220,170,0.75) !important; }
-.page-dark .art-card {
-  background: rgba(60,8,18,0.75) !important;
-  border: 1px solid rgba(200,168,75,0.22) !important;
-  backdrop-filter: blur(10px);
-}
-.page-dark .art-card:hover { border-color: rgba(200,168,75,0.5) !important; }
-.page-dark p, .page-dark span, .page-dark li { color: #FFFFFF; }
-.page-dark h1,.page-dark h2,.page-dark h3,.page-dark h4 { color: #fff; }
 
 /* ── PREMIUM GLOBAL ENHANCEMENTS ── */
 html { scroll-behavior: smooth; }
@@ -173,11 +184,11 @@ html { scroll-behavior: smooth; }
 
 /* Smooth scrollbar */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #1A0508; }
-::-webkit-scrollbar-thumb { background: linear-gradient(#8B1E2D, #D4AF37); border-radius: 3px; }
+::-webkit-scrollbar-track { background: var(--secondary); }
+::-webkit-scrollbar-thumb { background: linear-gradient(var(--primary-light), var(--accent)); border-radius: 3px; }
 
 /* Selection color */
-::selection { background: rgba(212,175,55,0.3); color: #FFFFFF; }
+::selection { background: rgba(var(--accent-rgb),0.3); color: var(--white); }
 
 /* Image rendering */
 img { max-width: 100%; }

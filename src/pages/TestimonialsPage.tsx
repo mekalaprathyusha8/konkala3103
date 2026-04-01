@@ -32,7 +32,7 @@ const TestimonialsPage = () => (
           highlight="Testimonials"
           subtitle="Hear from our students and parents about their transformative creative journeys"
         />
-        <TestimonialsSection />
+        <TestimonialsSection hideHeader />
 
         {/* Full testimonials grid */}
         <section style={{ background: "#F7F3EB", padding: "clamp(60px,8vh,100px) 0" }}>

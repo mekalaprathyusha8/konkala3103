@@ -41,7 +41,7 @@ const stats = [
   { value: "4.9★", label: "Google Rating" },
 ];
 
-const ContactSection = () => {
+const ContactSection = ({ hideHeader }: { hideHeader?: boolean }) => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const navigate = useNavigate();
@@ -52,20 +52,22 @@ const ContactSection = () => {
       <div style={{ position: "absolute", bottom: "-5%", left: "-3%", width: 280, height: 280, borderRadius: "45% 60% 40% 65%", background: "rgba(212,175,55,0.05)", pointerEvents: "none" }} />
 
       <div className="container" ref={ref}>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}
-          style={{ textAlign: "center", marginBottom: "clamp(40px,6vh,64px)" }}
-        >
-          <span style={{ display: "inline-block", fontFamily: "Poppins, sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.3em", textTransform: "uppercase", color: "#8B1E2D", background: "rgba(139,30,45,0.08)", border: "1.5px solid rgba(139,30,45,0.2)", borderRadius: 50, padding: "5px 18px", marginBottom: 14 }}>
-            Get in Touch
-          </span>
-          <h2 style={{ fontFamily: "Playfair Display, Georgia, serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", fontWeight: 900, color: "#5C0F1A", lineHeight: 1.2, marginBottom: 12 }}>
-            Contact <span style={{ background: "linear-gradient(135deg, #8B1E2D, #B7323C)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Us</span>
-          </h2>
-          <p style={{ color: "#777", fontFamily: "Poppins, sans-serif", fontSize: "0.95rem", maxWidth: 520, margin: "0 auto" }}>
-            We'd love to hear from you! Reach out for queries about courses, admissions, or workshops — we respond within 24 hours.
-          </p>
-        </motion.div>
+        {!hideHeader && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}
+            style={{ textAlign: "center", marginBottom: "clamp(40px,6vh,64px)" }}
+          >
+            <span style={{ display: "inline-block", fontFamily: "Poppins, sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.3em", textTransform: "uppercase", color: "#8B1E2D", background: "rgba(139,30,45,0.08)", border: "1.5px solid rgba(139,30,45,0.2)", borderRadius: 50, padding: "5px 18px", marginBottom: 14 }}>
+              Get in Touch
+            </span>
+            <h2 style={{ fontFamily: "Playfair Display, Georgia, serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", fontWeight: 900, color: "#5C0F1A", lineHeight: 1.2, marginBottom: 12 }}>
+              Contact <span style={{ background: "linear-gradient(135deg, #8B1E2D, #B7323C)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Us</span>
+            </h2>
+            <p style={{ color: "#777", fontFamily: "Poppins, sans-serif", fontSize: "0.95rem", maxWidth: 520, margin: "0 auto" }}>
+              We'd love to hear from you! Reach out for queries about courses, admissions, or workshops — we respond within 24 hours.
+            </p>
+          </motion.div>
+        )}
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Contact info */}

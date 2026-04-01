@@ -4,15 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
-/* ─── COLOR PALETTE ────────────────────────────
-   Primary:     #8B1E2D  (luxury red)
-   Secondary:   #B7323C  (rich red)
-   Accent:      #D4AF37  (gold)
-   Hover Gold:  #E6C65C
-   Dark:        #1C1C1C
-   Light BG:    #F7F3EB
-   White:       #FFFFFF
-──────────────────────────────────────────────── */
+/* ─── COLOR PALETTE (IMPORTED FROM CSS VARS) ──── */
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -47,17 +39,17 @@ const Header = () => {
 
   const bgStyle: React.CSSProperties = scrolled
     ? {
-        background: "rgba(92,15,26,0.97)",
+        background: "rgba(var(--primary-dark-rgb), 0.97)",
         backdropFilter: "blur(16px)",
-        borderBottom: "1px solid rgba(212,175,55,0.22)",
+        borderBottom: "1px solid rgba(var(--accent-rgb), 0.22)",
         boxShadow: "0 2px 24px rgba(0,0,0,0.3)"
       }
     : isHome
     ? { background: "transparent" }
     : {
-        background: "rgba(92,15,26,0.85)",
+        background: "rgba(var(--primary-dark-rgb), 0.85)",
         backdropFilter: "blur(14px)",
-        borderBottom: "1px solid rgba(212,175,55,0.15)"
+        borderBottom: "1px solid rgba(var(--accent-rgb), 0.15)"
       };
 
   return (
@@ -69,7 +61,7 @@ const Header = () => {
             src={logo}
             alt="Konkala Fine Arts"
             className={`transition-all duration-300 ${scrolled ? "h-[3.4rem]" : "h-[4rem]"} object-contain`}
-            style={{ filter: "drop-shadow(0 2px 8px rgba(212,175,55,0.25))", borderRadius: "10px" }}
+            style={{ filter: "drop-shadow(0 2px 8px rgba(var(--accent-rgb), 0.25))", borderRadius: "10px" }}
           />
         </button>
 
@@ -83,7 +75,7 @@ const Header = () => {
                 onClick={() => goTo(link.path)}
                 className="px-3 py-2 text-sm font-medium relative group transition-all duration-200"
                 style={{
-                  color: isActive ? "#D4AF37" : "rgba(247,243,235,0.68)",
+                  color: isActive ? "var(--accent)" : "rgba(var(--white-rgb), 0.68)",
                   fontFamily: "Poppins, sans-serif",
                   fontSize: "0.84rem"
                 }}
@@ -94,14 +86,14 @@ const Header = () => {
                   className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 rounded-full transition-all duration-300"
                   style={{
                     width: isActive ? "70%" : "0%",
-                    background: "linear-gradient(90deg, #8B1E2D, #D4AF37)"
+                    background: "linear-gradient(90deg, var(--primary), var(--accent))"
                   }}
                 />
                 {/* Hover underline */}
                 {!isActive && (
                   <span
                     className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 rounded-full w-0 group-hover:w-[70%] transition-all duration-300"
-                    style={{ background: "linear-gradient(90deg, #8B1E2D, #D4AF37)" }}
+                    style={{ background: "linear-gradient(90deg, var(--primary), var(--accent))" }}
                   />
                 )}
               </button>
@@ -111,22 +103,22 @@ const Header = () => {
             onClick={() => goTo("/register")}
             className="ml-3 text-sm font-bold py-2.5 px-5 rounded-full transition-all duration-300"
             onMouseEnter={e => {
-              e.currentTarget.style.background = "linear-gradient(135deg, #8B1E2D, #B7323C, #E6C65C)";
+              e.currentTarget.style.background = "var(--gradient-primary)";
               e.currentTarget.style.transform = "scale(1.06)";
-              e.currentTarget.style.color = "#1C1C1C";
+              e.currentTarget.style.color = "var(--text-dark)";
             }}
             onMouseLeave={e => {
-              e.currentTarget.style.background = "linear-gradient(135deg, #5C0F1A, #8B1E2D, #B7323C)";
+              e.currentTarget.style.background = "var(--gradient-secondary)";
               e.currentTarget.style.transform = "scale(1)";
-              e.currentTarget.style.color = "#D4AF37";
+              e.currentTarget.style.color = "var(--accent)";
             }}
             style={{
-              background: "linear-gradient(135deg, #5C0F1A, #8B1E2D, #B7323C)",
-              color: "#D4AF37",
-              border: "1.5px solid rgba(212,175,55,0.6)",
+              background: "var(--gradient-secondary)",
+              color: "var(--accent)",
+              border: "1.5px solid rgba(var(--accent-rgb), 0.6)",
               fontFamily: "Poppins, sans-serif",
               letterSpacing: "0.05em",
-              boxShadow: "0 3px 16px rgba(139,30,45,0.5)",
+              boxShadow: "0 3px 16px rgba(var(--primary-rgb), 0.5)",
               transition: "all 0.22s"
             }}
           >
@@ -139,9 +131,9 @@ const Header = () => {
           onClick={() => setMenuOpen(!menuOpen)}
           className="lg:hidden p-2 rounded-lg transition-colors"
           style={{
-            color: "#D4AF37",
-            background: "rgba(139,30,45,0.55)",
-            border: "1px solid rgba(212,175,55,0.28)"
+            color: "var(--accent)",
+            background: "rgba(var(--primary-rgb), 0.55)",
+            border: "1px solid rgba(var(--accent-rgb), 0.28)"
           }}
         >
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -155,7 +147,7 @@ const Header = () => {
             initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             className="lg:hidden overflow-hidden"
-            style={{ background: "rgba(92,15,26,0.98)", borderTop: "1px solid rgba(212,175,55,0.18)" }}
+            style={{ background: "rgba(var(--primary-dark-rgb), 0.98)", borderTop: "1px solid rgba(var(--accent-rgb), 0.18)" }}
           >
             <div className="container py-4 flex flex-col gap-1">
               {navLinks.map((link) => {
@@ -166,10 +158,10 @@ const Header = () => {
                     onClick={() => goTo(link.path)}
                     className="py-2.5 text-left font-medium text-sm transition-colors px-3 rounded-lg"
                     style={{
-                      color: isActive ? "#D4AF37" : "rgba(247,243,235,0.68)",
+                      color: isActive ? "var(--accent)" : "rgba(var(--white-rgb), 0.68)",
                       fontFamily: "Poppins, sans-serif",
-                      background: isActive ? "rgba(139,30,45,0.35)" : "transparent",
-                      borderLeft: isActive ? "2px solid #D4AF37" : "2px solid transparent"
+                      background: isActive ? "rgba(var(--primary-rgb), 0.35)" : "transparent",
+                      borderLeft: isActive ? "2px solid var(--accent)" : "2px solid transparent"
                     }}
                   >
                     {link.label}
@@ -180,9 +172,9 @@ const Header = () => {
                 onClick={() => goTo("/register")}
                 className="mt-2 py-3 text-center font-bold rounded-full transition-all"
                 style={{
-                  background: "linear-gradient(135deg, #5C0F1A, #8B1E2D, #B7323C)",
-                  color: "#D4AF37",
-                  border: "1.5px solid rgba(212,175,55,0.55)",
+                  background: "var(--gradient-secondary)",
+                  color: "var(--accent)",
+                  border: "1.5px solid rgba(var(--accent-rgb), 0.55)",
                   fontFamily: "Poppins, sans-serif",
                   letterSpacing: "0.05em"
                 }}

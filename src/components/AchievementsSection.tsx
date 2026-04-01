@@ -11,7 +11,7 @@ const achievements = [
   { icon: Heart, title: "4.9★ Average Rating", subtitle: "Loved by students across all ages", color: "#B7323C", bg: "rgba(183,50,60,0.12)" },
 ];
 
-const AchievementsSection = () => {
+const AchievementsSection = ({ hideHeader }: { hideHeader?: boolean } = {}) => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -33,25 +33,27 @@ const AchievementsSection = () => {
 
       <div className="container" style={{ position: "relative", zIndex: 2 }}>
         {/* Section header */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}
-          style={{ textAlign: "center", marginBottom: "clamp(40px,6vh,64px)" }}
-        >
-          <span style={{ display: "inline-block", fontFamily: "Poppins, sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.3em", textTransform: "uppercase", color: "#D4AF37", background: "rgba(212,175,55,0.1)", border: "1.5px solid rgba(212,175,55,0.3)", borderRadius: 50, padding: "5px 18px", marginBottom: 14 }}>
-            Recognition & Milestones
-          </span>
-          <h2 style={{ fontFamily: "Playfair Display, Georgia, serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", fontWeight: 900, color: "#FFFFFF", lineHeight: 1.2, marginBottom: 12 }}>
-            Our <span style={{ background: "linear-gradient(135deg, #D4AF37, #E6C65C)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Achievements</span>
-          </h2>
-          <p style={{ color: "rgba(247,243,235,0.7)", fontFamily: "Poppins, sans-serif", fontSize: "0.95rem", maxWidth: 520, margin: "0 auto" }}>
-            A decade of dedication recognized through national awards, thousands of students, and deep community impact.
-          </p>
-          <div style={{ display: "flex", alignItems: "center", gap: 8, justifyContent: "center", marginTop: 16 }}>
-            <div style={{ width: 48, height: 1.5, background: "linear-gradient(90deg, transparent, rgba(212,175,55,0.7))" }} />
-            <div style={{ width: 7, height: 7, background: "#D4AF37", transform: "rotate(45deg)" }} />
-            <div style={{ width: 48, height: 1.5, background: "linear-gradient(90deg, rgba(212,175,55,0.7), transparent)" }} />
-          </div>
-        </motion.div>
+        {!hideHeader && (
+          <motion.div
+            initial={{ opacity: 0, y: 24 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}
+            style={{ textAlign: "center", marginBottom: "clamp(40px,6vh,64px)" }}
+          >
+            <span style={{ display: "inline-block", fontFamily: "Poppins, sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.3em", textTransform: "uppercase", color: "#D4AF37", background: "rgba(212,175,55,0.1)", border: "1.5px solid rgba(212,175,55,0.3)", borderRadius: 50, padding: "5px 18px", marginBottom: 14 }}>
+              Recognition & Milestones
+            </span>
+            <h2 style={{ fontFamily: "Playfair Display, Georgia, serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", fontWeight: 900, color: "#FFFFFF", lineHeight: 1.2, marginBottom: 12 }}>
+              Our <span style={{ background: "linear-gradient(135deg, #D4AF37, #E6C65C)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Achievements</span>
+            </h2>
+            <p style={{ color: "rgba(247,243,235,0.7)", fontFamily: "Poppins, sans-serif", fontSize: "0.95rem", maxWidth: 520, margin: "0 auto" }}>
+              A decade of dedication recognized through national awards, thousands of students, and deep community impact.
+            </p>
+            <div style={{ display: "flex", alignItems: "center", gap: 8, justifyContent: "center", marginTop: 16 }}>
+              <div style={{ width: 48, height: 1.5, background: "linear-gradient(90deg, transparent, rgba(212,175,55,0.7))" }} />
+              <div style={{ width: 7, height: 7, background: "#D4AF37", transform: "rotate(45deg)" }} />
+              <div style={{ width: 48, height: 1.5, background: "linear-gradient(90deg, rgba(212,175,55,0.7), transparent)" }} />
+            </div>
+          </motion.div>
+        )}
 
         {/* Achievements grid */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 20 }}>

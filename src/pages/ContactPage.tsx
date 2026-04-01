@@ -15,7 +15,7 @@ const ContactPage = () => (
           highlight="Touch"
           subtitle="We'd love to hear from you — reach out for courses, admissions, or any queries"
         />
-        <ContactSection />
+        <ContactSection hideHeader />
       </div>
     </PageWrapper>
     <Footer />

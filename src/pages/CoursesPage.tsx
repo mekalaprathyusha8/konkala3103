@@ -11,7 +11,7 @@ const CoursesPage = () => (
     <PageWrapper page="courses">
       <div className="pt-16">
         <PageHero title="Our Art & Music" highlight="Courses" subtitle="" />
-        <CoursesSection />
+        <CoursesSection hideHeader />
       </div>
     </PageWrapper>
     <Footer />

@@ -55,7 +55,7 @@ const courses = [
   { title: "Music Classes", desc: "Learn music theory, rhythm, guitar, vocals and various instruments in a fun, supportive environment.", img: musicImg },
 ];
 
-const CoursesSection = () => {
+const CoursesSection = ({ hideHeader }: { hideHeader?: boolean }) => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const [selectedCourse, setSelectedCourse] = useState<string | null>(null);
@@ -67,22 +67,21 @@ const CoursesSection = () => {
         <div className="container">
           
           {/* Section Heading */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6 }}
-            style={{ textAlign: "center", marginBottom: "clamp(32px,5vh,52px)" }}
-          >
-            <span style={{ display: "inline-block", fontFamily: "Poppins, sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.3em", textTransform: "uppercase", color: "#8B1E2D", background: "rgba(139,30,45,0.08)", border: "1.5px solid rgba(139,30,45,0.2)", borderRadius: 50, padding: "5px 18px", marginBottom: 14 }}>
-              What We Offer
-            </span>
-            <h2 style={{ fontFamily: "Playfair Display, Georgia, serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", fontWeight: 900, color: "#5C0F1A", lineHeight: 1.2, marginBottom: 12 }}>
-              Our Arts &amp; <span style={{ background: "linear-gradient(135deg, #8B1E2D, #B7323C)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Music</span>
-            </h2>
-            <p style={{ color: "#777", fontFamily: "Poppins, sans-serif", fontSize: "0.95rem", maxWidth: 520, margin: "0 auto" }}>
-              Explore our expertly designed courses for all ages and skill levels — from painting and sketching to pottery and music.
-            </p>
-          </motion.div>
+          {!hideHeader && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6 }}
+              style={{ textAlign: "center", marginBottom: "clamp(32px,5vh,52px)" }}
+            >
+              <h2 style={{ fontFamily: "Playfair Display, Georgia, serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", fontWeight: 900, color: "#8B2E2E", lineHeight: 1.2, marginBottom: 12 }}>
+                Our Arts &amp; Music
+              </h2>
+              <p style={{ color: "#555", fontFamily: "Poppins, sans-serif", fontSize: "0.95rem", maxWidth: 520, margin: "0 auto" }}>
+                Explore our expertly designed courses for all ages and skill levels — from painting and sketching to pottery and music.
+              </p>
+            </motion.div>
+          )}
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {courses.map((course, i) => (
@@ -97,11 +96,11 @@ const CoursesSection = () => {
                   <img src={course.img} alt={course.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
                 <div className="p-5 md:p-6">
-                  <h3 className="font-heading font-bold text-lg text-foreground">{course.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground font-body">{course.desc}</p>
+                  <h3 className="font-heading font-bold text-lg text-white">{course.title}</h3>
+                  <p className="mt-2 text-sm text-white/90 font-body">{course.desc}</p>
                   <button
                     onClick={() => { navigate("/gallery"); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-                    className="btn-gradient mt-4 text-sm py-2 px-5"
+                    className="mt-4 text-sm font-button font-medium py-[0.4rem] px-5 rounded-full border-[1.5px] border-[#B7323C] bg-gradient-to-r from-[#B7323C]/20 to-transparent hover:bg-[#B7323C] text-white transition-colors duration-300"
                   >
                     Show Details
                   </button>

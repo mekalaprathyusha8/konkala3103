@@ -11,7 +11,7 @@ const GalleryPage = () => (
     <PageWrapper page="gallery">
       <div className="pt-16">
         <PageHero title="Our" highlight="Gallery" subtitle="Explore our creative works, student art and studio moments" />
-        <GallerySection />
+        <GallerySection hideHeader />
       </div>
     </PageWrapper>
     <Footer />

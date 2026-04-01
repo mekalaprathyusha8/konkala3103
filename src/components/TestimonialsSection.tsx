@@ -15,7 +15,7 @@ const testimonials = [
 
 const SLIDE_MS = 5000;
 
-const TestimonialsSection = () => {
+const TestimonialsSection = ({ hideHeader }: { hideHeader?: boolean } = {}) => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
   const [current, setCurrent] = useState(0);
@@ -62,20 +62,22 @@ const TestimonialsSection = () => {
 
       <div className="container" style={{ position: "relative", zIndex: 1 }}>
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 28 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}
-          style={{ textAlign: "center", marginBottom: "clamp(40px,6vh,64px)" }}
-        >
-          <span style={{ display: "inline-block", fontFamily: "Poppins, sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.3em", textTransform: "uppercase", color: "#D4AF37", background: "rgba(212,175,55,0.1)", border: "1.5px solid rgba(212,175,55,0.3)", borderRadius: 50, padding: "5px 18px", marginBottom: 14 }}>
-            Student Stories
-          </span>
-          <h2 style={{ fontFamily: "Playfair Display, Georgia, serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", fontWeight: 900, color: "#FFFFFF", lineHeight: 1.2, marginBottom: 12 }}>
-            What Our Students <span style={{ background: "linear-gradient(135deg, #D4AF37, #E6C65C)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Say</span>
-          </h2>
-          <p style={{ color: "rgba(247,243,235,0.6)", fontFamily: "Poppins, sans-serif", fontSize: "0.95rem", maxWidth: 480, margin: "0 auto" }}>
-            Real stories from students and parents who have experienced the transformative power of art education at Konkala.
-          </p>
-        </motion.div>
+        {!hideHeader && (
+          <motion.div
+            initial={{ opacity: 0, y: 28 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}
+            style={{ textAlign: "center", marginBottom: "clamp(40px,6vh,64px)" }}
+          >
+            <span style={{ display: "inline-block", fontFamily: "Poppins, sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.3em", textTransform: "uppercase", color: "#D4AF37", background: "rgba(212,175,55,0.1)", border: "1.5px solid rgba(212,175,55,0.3)", borderRadius: 50, padding: "5px 18px", marginBottom: 14 }}>
+              Student Stories
+            </span>
+            <h2 style={{ fontFamily: "Playfair Display, Georgia, serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", fontWeight: 900, color: "#FFFFFF", lineHeight: 1.2, marginBottom: 12 }}>
+              What Our Students <span style={{ background: "linear-gradient(135deg, #D4AF37, #E6C65C)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Say</span>
+            </h2>
+            <p style={{ color: "rgba(247,243,235,0.6)", fontFamily: "Poppins, sans-serif", fontSize: "0.95rem", maxWidth: 480, margin: "0 auto" }}>
+              Real stories from students and parents who have experienced the transformative power of art education at Konkala.
+            </p>
+          </motion.div>
+        )}
 
         {/* Testimonial card */}
         <div style={{ maxWidth: 760, margin: "0 auto" }}

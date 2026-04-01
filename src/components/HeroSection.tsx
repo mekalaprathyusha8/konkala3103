@@ -70,14 +70,14 @@ const HeroSection = () => {
       id="home"
       style={{
         position: "relative", width: "100%", overflow: "hidden",
-        background: "linear-gradient(165deg, #2E0A12 0%, #5C0F1A 20%, #8B1E2D 45%, #B7323C 65%, #8B1E2D 80%, #5C0F1A 95%, #2E0A12 100%)",
+        background: "linear-gradient(165deg, var(--secondary) 0%, var(--primary-dark) 20%, var(--primary) 45%, var(--primary-light) 65%, var(--primary) 80%, var(--primary-dark) 95%, var(--secondary) 100%)",
       }}
     >
       {/* Gold top stripe */}
-      <div style={{ height: 3, background: "linear-gradient(90deg, #2E0A12, #8B1E2D 15%, #D4AF37 30%, #E6C65C 50%, #D4AF37 70%, #8B1E2D 85%, #2E0A12)" }} />
+      <div style={{ height: 3, background: "linear-gradient(90deg, var(--secondary), var(--primary) 15%, var(--accent) 30%, var(--accent-bright) 50%, var(--accent) 70%, var(--primary) 85%, var(--secondary))" }} />
 
       {/* Ambient overlays */}
-      <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(212,175,55,0.07) 0%, transparent 55%)", zIndex: 1 }} />
+      <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(var(--accent-rgb),0.07) 0%, transparent 55%)", zIndex: 1 }} />
       <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 2, opacity: 0.03, backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")", backgroundSize: "200px" }} />
 
       {/* CONTENT — compact layout, smaller height */}
@@ -87,8 +87,8 @@ const HeroSection = () => {
       >
         {/* Badge */}
         <motion.div initial={{ opacity: 0, y: -16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} style={{ marginBottom: 14 }}>
-          <span style={{ display: "inline-flex", alignItems: "center", gap: 7, fontFamily: "Poppins, sans-serif", color: "#D4AF37", fontSize: "clamp(8px,1vw,10px)", fontWeight: 700, letterSpacing: "0.35em", textTransform: "uppercase", background: "rgba(28,8,14,0.75)", border: "1.5px solid rgba(212,175,55,0.5)", borderRadius: 50, padding: "5px 18px", backdropFilter: "blur(10px)" }}>
-            <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#D4AF37" }} className="pulse-dot" />
+          <span style={{ display: "inline-flex", alignItems: "center", gap: 7, fontFamily: "Poppins, sans-serif", color: "var(--accent)", fontSize: "clamp(8px,1vw,10px)", fontWeight: 700, letterSpacing: "0.35em", textTransform: "uppercase", background: "rgba(var(--secondary-rgb),0.75)", border: "1.5px solid rgba(var(--accent-rgb),0.5)", borderRadius: 50, padding: "5px 18px", backdropFilter: "blur(10px)" }}>
+            <span style={{ width: 5, height: 5, borderRadius: "50%", background: "var(--accent)" }} className="pulse-dot" />
             Konkala Fine Arts Academy · Hyderabad
           </span>
         </motion.div>
@@ -100,7 +100,7 @@ const HeroSection = () => {
         >
           Where Every Stroke
           <br />
-          <span style={{ background: "linear-gradient(135deg, #D4AF37 0%, #E6C65C 50%, #D4AF37 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+          <span style={{ background: "var(--gradient-gold)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
             Tells a Story
           </span>
         </motion.h1>
@@ -111,7 +111,7 @@ const HeroSection = () => {
           style={{ display: "flex", gap: 6, flexWrap: "wrap", justifyContent: "center", marginBottom: 14, padding: "0 16px" }}
         >
           {disciplines.map((d) => (
-            <span key={d} style={{ fontFamily: "Poppins, sans-serif", fontSize: "0.7rem", fontWeight: 500, color: "rgba(247,243,235,0.7)", letterSpacing: "0.08em", padding: "3px 12px", borderRadius: 50, background: "rgba(255,255,255,0.06)", border: "1px solid rgba(212,175,55,0.18)" }}>
+            <span key={d} style={{ fontFamily: "Poppins, sans-serif", fontSize: "0.7rem", fontWeight: 500, color: "rgba(var(--white-rgb),0.7)", letterSpacing: "0.08em", padding: "3px 12px", borderRadius: 50, background: "rgba(var(--white-rgb),0.06)", border: "1px solid rgba(var(--accent-rgb),0.18)" }}>
               {d}
             </span>
           ))}
@@ -122,9 +122,9 @@ const HeroSection = () => {
           initial={{ scaleX: 0, opacity: 0 }} animate={{ scaleX: 1, opacity: 1 }} transition={{ duration: 0.5, delay: 0.4 }}
           style={{ display: "flex", alignItems: "center", gap: 6, justifyContent: "center", marginBottom: 18 }}
         >
-          <div style={{ width: 48, height: 1.5, background: "linear-gradient(90deg, transparent, rgba(212,175,55,0.7))" }} />
-          {[1, 0.4, 1].map((o, i) => <div key={i} style={{ width: 6, height: 6, background: "#D4AF37", transform: "rotate(45deg)", opacity: o }} />)}
-          <div style={{ width: 48, height: 1.5, background: "linear-gradient(90deg, rgba(212,175,55,0.7), transparent)" }} />
+          <div style={{ width: 48, height: 1.5, background: "linear-gradient(90deg, transparent, rgba(var(--accent-rgb),0.7))" }} />
+          {[1, 0.4, 1].map((o, i) => <div key={i} style={{ width: 6, height: 6, background: "var(--accent)", transform: "rotate(45deg)", opacity: o }} />)}
+          <div style={{ width: 48, height: 1.5, background: "linear-gradient(90deg, rgba(var(--accent-rgb),0.7), transparent)" }} />
         </motion.div>
 
         {/* IMAGE SLIDER — the main feature */}
@@ -157,13 +157,13 @@ const HeroSection = () => {
                     {/* Frame */}
                     <div style={{ background: "linear-gradient(145deg, #2a1a1e, #1a1012)", padding: "clamp(5px,0.8vw,10px)", borderRadius: 12, boxShadow: "0 0 0 1px rgba(212,175,55,0.16), 0 16px 48px rgba(0,0,0,0.75)" }}>
                       <div style={{ position: "relative", borderRadius: 7, overflow: "hidden" }}>
-                        <div style={{ position: "absolute", inset: 0, border: "1.5px solid rgba(212,175,55,0.3)", borderRadius: 7, zIndex: 1, pointerEvents: "none" }} />
+                        <div style={{ position: "absolute", inset: 0, border: "1.5px solid rgba(var(--accent-rgb),0.3)", borderRadius: 7, zIndex: 1, pointerEvents: "none" }} />
                         <img
                           src={src}
                           alt={`Artwork ${slide * 4 + i + 1}`}
                           loading="lazy"
                           className="art-img-zoom"
-                          style={{ width: "100%", aspectRatio: "1/1", objectFit: "cover", display: "block", borderRadius: 7, background: "rgba(28,8,14,0.5)" }}
+                          style={{ width: "100%", aspectRatio: "1/1", objectFit: "cover", display: "block", borderRadius: 7, background: "rgba(var(--secondary-rgb),0.5)" }}
                         />
                       </div>
                     </div>
@@ -173,10 +173,10 @@ const HeroSection = () => {
             </AnimatePresence>
 
             {/* Arrows */}
-            <button onClick={prev} className="slider-arrow-btn" style={{ position: "absolute", left: 8, top: "50%", transform: "translateY(-50%)", width: 36, height: 36, borderRadius: "50%", zIndex: 30, background: "rgba(28,8,14,0.88)", border: "1.5px solid rgba(212,175,55,0.45)", color: "#D4AF37", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", backdropFilter: "blur(8px)", boxShadow: "0 3px 12px rgba(0,0,0,0.5)", transition: "all 0.2s" }}>
+            <button onClick={prev} className="slider-arrow-btn" style={{ position: "absolute", left: 8, top: "50%", transform: "translateY(-50%)", width: 36, height: 36, borderRadius: "50%", zIndex: 30, background: "rgba(var(--secondary-rgb),0.88)", border: "1.5px solid rgba(var(--accent-rgb),0.45)", color: "var(--accent)", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", backdropFilter: "blur(8px)", boxShadow: "0 3px 12px rgba(0,0,0,0.5)", transition: "all 0.2s" }}>
               <ChevronLeft size={16} />
             </button>
-            <button onClick={next} className="slider-arrow-btn" style={{ position: "absolute", right: 8, top: "50%", transform: "translateY(-50%)", width: 36, height: 36, borderRadius: "50%", zIndex: 30, background: "rgba(28,8,14,0.88)", border: "1.5px solid rgba(212,175,55,0.45)", color: "#D4AF37", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", backdropFilter: "blur(8px)", boxShadow: "0 3px 12px rgba(0,0,0,0.5)", transition: "all 0.2s" }}>
+            <button onClick={next} className="slider-arrow-btn" style={{ position: "absolute", right: 8, top: "50%", transform: "translateY(-50%)", width: 36, height: 36, borderRadius: "50%", zIndex: 30, background: "rgba(var(--secondary-rgb),0.88)", border: "1.5px solid rgba(var(--accent-rgb),0.45)", color: "var(--accent)", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", backdropFilter: "blur(8px)", boxShadow: "0 3px 12px rgba(0,0,0,0.5)", transition: "all 0.2s" }}>
               <ChevronRight size={16} />
             </button>
           </div>
@@ -185,11 +185,11 @@ const HeroSection = () => {
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6, marginTop: 10 }}>
             <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
               {SLIDES.map((_, i) => (
-                <button key={i} onClick={() => go(i)} style={{ width: i === slide ? 28 : 8, height: 8, borderRadius: 4, border: "none", cursor: "pointer", transition: "all 0.35s ease", background: i === slide ? "linear-gradient(90deg, #8B1E2D, #D4AF37)" : "rgba(255,255,255,0.28)" }} />
+                <button key={i} onClick={() => go(i)} style={{ width: i === slide ? 28 : 8, height: 8, borderRadius: 4, border: "none", cursor: "pointer", transition: "all 0.35s ease", background: i === slide ? "linear-gradient(90deg, var(--primary), var(--accent))" : "rgba(var(--white-rgb),0.28)" }} />
               ))}
             </div>
-            <div style={{ width: "100%", maxWidth: 200, height: 2, background: "rgba(255,255,255,0.08)", borderRadius: 2, overflow: "hidden" }}>
-              <motion.div key={`pb-${slide}`} initial={{ width: "0%" }} animate={{ width: "100%" }} transition={{ duration: SLIDE_MS / 1000, ease: "linear" }} style={{ height: "100%", background: "linear-gradient(90deg, #8B1E2D, #D4AF37)" }} />
+            <div style={{ width: "100%", maxWidth: 200, height: 2, background: "rgba(var(--white-rgb),0.08)", borderRadius: 2, overflow: "hidden" }}>
+              <motion.div key={`pb-${slide}`} initial={{ width: "0%" }} animate={{ width: "100%" }} transition={{ duration: SLIDE_MS / 1000, ease: "linear" }} style={{ height: "100%", background: "linear-gradient(90deg, var(--primary), var(--accent))" }} />
             </div>
           </div>
         </motion.div>
@@ -202,7 +202,7 @@ const HeroSection = () => {
           <button
             onClick={() => navigate("/courses")}
             className="cta-primary-btn"
-            style={{ background: "linear-gradient(135deg, #5C0F1A, #8B1E2D, #B7323C)", color: "#D4AF37", border: "2px solid rgba(212,175,55,0.6)", borderRadius: 50, padding: "12px 32px", fontWeight: 700, fontSize: "0.88rem", letterSpacing: "0.05em", cursor: "pointer", fontFamily: "Poppins, sans-serif", boxShadow: "0 5px 24px rgba(139,30,45,0.5)", transition: "all 0.25s" }}
+            style={{ background: "var(--gradient-secondary)", color: "var(--accent)", border: "2px solid rgba(var(--accent-rgb),0.6)", borderRadius: 50, padding: "12px 32px", fontWeight: 700, fontSize: "0.88rem", letterSpacing: "0.05em", cursor: "pointer", fontFamily: "Poppins, sans-serif", boxShadow: "0 5px 24px rgba(var(--primary-rgb),0.5)", transition: "all 0.25s" }}
           >
             Explore Courses
           </button>
@@ -211,22 +211,22 @@ const HeroSection = () => {
         {/* Stats — compact pill */}
         <motion.div
           initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.75 }}
-          style={{ display: "inline-flex", alignItems: "center", background: "rgba(20,6,10,0.7)", backdropFilter: "blur(18px)", border: "1px solid rgba(212,175,55,0.22)", borderRadius: 50, padding: "8px 6px", boxShadow: "0 6px 24px rgba(0,0,0,0.35)" }}
+          style={{ display: "inline-flex", alignItems: "center", background: "rgba(var(--secondary-rgb),0.7)", backdropFilter: "blur(18px)", border: "1px solid rgba(var(--accent-rgb),0.22)", borderRadius: 50, padding: "8px 6px", boxShadow: "0 6px 24px rgba(0,0,0,0.35)" }}
         >
           {[{ n: "10+", l: "Years" }, { n: "1000+", l: "Students" }, { n: "15+", l: "Courses" }].map((s, i, arr) => (
             <div key={s.l} style={{ display: "flex", alignItems: "center" }}>
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "0 20px" }}>
-                <span style={{ color: "#D4AF37", fontWeight: 800, fontSize: "1rem", fontFamily: "Playfair Display, Georgia, serif", lineHeight: 1 }}>{s.n}</span>
-                <span style={{ color: "rgba(247,243,235,0.45)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", marginTop: 2 }}>{s.l}</span>
+                <span style={{ color: "var(--accent)", fontWeight: 800, fontSize: "1rem", fontFamily: "Playfair Display, Georgia, serif", lineHeight: 1 }}>{s.n}</span>
+                <span style={{ color: "rgba(var(--white-rgb),0.45)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", marginTop: 2 }}>{s.l}</span>
               </div>
-              {i < arr.length - 1 && <div style={{ width: 1, height: 28, background: "rgba(212,175,55,0.18)" }} />}
+              {i < arr.length - 1 && <div style={{ width: 1, height: 28, background: "rgba(var(--accent-rgb),0.18)" }} />}
             </div>
           ))}
         </motion.div>
       </div>
 
       {/* Gold bottom stripe */}
-      <div style={{ height: 3, background: "linear-gradient(90deg, #2E0A12, #8B1E2D 15%, #D4AF37 30%, #E6C65C 50%, #D4AF37 70%, #8B1E2D 85%, #2E0A12)" }} />
+      <div style={{ height: 3, background: "linear-gradient(90deg, var(--secondary), var(--primary) 15%, var(--accent) 30%, var(--accent-bright) 50%, var(--accent) 70%, var(--primary) 85%, var(--secondary))" }} />
 
       <style>{`
         .hero-slider-grid {
@@ -246,9 +246,9 @@ const HeroSection = () => {
         .art-frame-hover:hover { transform: translateY(-7px) scale(1.03); z-index: 20; }
         .art-img-zoom { transition: transform 0.5s ease; }
         .art-frame-hover:hover .art-img-zoom { transform: scale(1.08); }
-        .slider-arrow-btn:hover { background: rgba(139,30,45,0.95) !important; }
-        .cta-primary-btn:hover { transform: scale(1.05) translateY(-2px); box-shadow: 0 10px 36px rgba(139,30,45,0.65) !important; }
-        .cta-secondary-btn:hover { background: rgba(212,175,55,0.16) !important; transform: scale(1.05) translateY(-2px); }
+        .slider-arrow-btn:hover { background: rgba(var(--primary-rgb),0.95) !important; }
+        .cta-primary-btn:hover { transform: scale(1.05) translateY(-2px); box-shadow: 0 10px 36px rgba(var(--primary-rgb),0.65) !important; }
+        .cta-secondary-btn:hover { background: rgba(var(--accent-rgb),0.16) !important; transform: scale(1.05) translateY(-2px); }
         .pulse-dot { animation: dotPulse 2s ease-in-out infinite; }
         @keyframes dotPulse { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
       `}</style>

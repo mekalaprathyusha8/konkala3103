@@ -33,7 +33,7 @@ const AchievementsPage = () => (
           highlight="Achievements"
           subtitle="A decade of artistic excellence, community impact, and student success stories"
         />
-        <AchievementsSection />
+        <AchievementsSection hideHeader />
 
         {/* Certifications & Affiliations */}
         <section style={{ padding: "clamp(60px,8vh,100px) 0", background: "linear-gradient(135deg, #1A0508, #2E0A12)" }}>

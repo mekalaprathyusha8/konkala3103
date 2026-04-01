@@ -94,6 +94,30 @@ const WorkshopsPage = () => {
                   </motion.div>
                 ))}
               </div>
+
+              {/* Workshop Gallery 
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                style={{ marginTop: "clamp(60px,8vh,80px)" }}
+              >
+                <h2 style={{ fontFamily: "Playfair Display, Georgia, serif", fontSize: "clamp(1.8rem,4vw,2.5rem)", fontWeight: 800, color: "#5C0F1A", textAlign: "center", marginBottom: "clamp(30px,4vh,48px)" }}>
+                  Glimpses of Our <span style={{ background: "linear-gradient(135deg, #8B1E2D, #B7323C)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Workshops</span>
+                </h2>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
+                  {[
+                    "https://lh3.googleusercontent.com/p/AF1QipO9M6t8cqUT14niDnEg1f9amr3rmdcVtiu4XbRo=w1024",
+                    "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerREN27u8k_sawHp1RblSV-INnE59Q85ylXNW7BUgov8KxNkNwFNm3KXMKGU0VkUFNXe21U6IyFHpyy2cg3KqHaxt66bDLaMpoHxfdkSrsKvGcN=w1024"
+                  ].map((src, i) => (
+                    <motion.div key={src} initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.1 }} style={{ borderRadius: 16, overflow: "hidden", border: "2px solid rgba(212,175,55,0.15)", boxShadow: "0 8px 30px rgba(139,30,45,0.12)", cursor: "pointer", background: "#f8f8f8" }}>
+                      <img src={src} alt="Workshop" style={{ width: "100%", height: 260, objectFit: "cover", display: "block", transition: "transform 0.5s ease" }} className="ws-gallery-img" onError={(e) => { e.currentTarget.style.opacity = '0.3' }} referrerPolicy="no-referrer" crossOrigin="anonymous" loading="lazy" />
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+              */}
             </div>
           </section>
         </div>
@@ -103,6 +127,7 @@ const WorkshopsPage = () => {
       <style>{`
         .workshop-full-card:hover { border-color: rgba(212,175,55,0.3) !important; box-shadow: 0 12px 40px rgba(139,30,45,0.12) !important; transform: translateY(-5px); }
         .ws-join-btn:hover { background: linear-gradient(135deg, #8B1E2D, #B7323C, #D4AF37) !important; box-shadow: 0 4px 20px rgba(139,30,45,0.4); }
+        .ws-gallery-img:hover { transform: scale(1.06); }
         @media (max-width: 640px) { .workshop-stats-grid { grid-template-columns: repeat(2, 1fr) !important; } }
       `}</style>
     </>
