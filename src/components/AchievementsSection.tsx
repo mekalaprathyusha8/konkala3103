@@ -36,15 +36,6 @@ const AchievementsSection = ({ hideHeader }: { hideHeader?: boolean } = {}) => {
             initial={{ opacity: 0, y: 24 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}
             style={{ textAlign: "center", marginBottom: "clamp(40px,6vh,64px)" }}
           >
-<<<<<<< HEAD
-            <span style={{ display: "inline-block", fontFamily: "Poppins, sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.3em", textTransform: "uppercase", color: "#D4AF37", background: "rgba(212,175,55,0.1)", border: "1.5px solid rgba(212,175,55,0.3)", borderRadius: 50, padding: "5px 18px", marginBottom: 14 }}>
-              Recognition & Milestones
-            </span>
-            <h2 style={{ fontFamily: "Playfair Display, Georgia, serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", fontWeight: 900, color: "#FFFFFF", lineHeight: 1.2, marginBottom: 12 }}>
-              Our <span style={{ background: "linear-gradient(135deg, #D4AF37, #E6C65C)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Achievements</span>
-            </h2>
-            <p style={{ color: "rgba(247,243,235,0.7)", fontFamily: "Poppins, sans-serif", fontSize: "0.95rem", maxWidth: 520, margin: "0 auto" }}>
-=======
             <span style={{ display: "inline-block", fontFamily: "Poppins, sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.3em", textTransform: "uppercase", color: "#8B1E2D", background: "rgba(139,30,45,0.08)", border: "1.5px solid rgba(139,30,45,0.2)", borderRadius: 50, padding: "5px 18px", marginBottom: 14 }}>
               Recognition & Milestones
             </span>
@@ -52,7 +43,6 @@ const AchievementsSection = ({ hideHeader }: { hideHeader?: boolean } = {}) => {
               Our <span style={{ background: "linear-gradient(135deg, #8B1E2D, #B7323C)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Achievements</span>
             </h2>
             <p style={{ color: "#777", fontFamily: "Poppins, sans-serif", fontSize: "0.95rem", maxWidth: 520, margin: "0 auto" }}>
->>>>>>> 574b394 (Preview Added)
               A decade of dedication recognized through national awards, thousands of students, and deep community impact.
             </p>
             <div style={{ display: "flex", alignItems: "center", gap: 8, justifyContent: "center", marginTop: 16 }}>

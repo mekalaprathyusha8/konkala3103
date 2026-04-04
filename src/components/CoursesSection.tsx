@@ -73,12 +73,6 @@ const CoursesSection = ({ hideHeader }: { hideHeader?: boolean }) => {
               transition={{ duration: 0.6 }}
               style={{ textAlign: "center", marginBottom: "clamp(32px,5vh,52px)" }}
             >
-<<<<<<< HEAD
-              <h2 style={{ fontFamily: "Playfair Display, Georgia, serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", fontWeight: 900, color: "#8B2E2E", lineHeight: 1.2, marginBottom: 12 }}>
-                Our Arts &amp; Music
-              </h2>
-              <p style={{ color: "#555", fontFamily: "Poppins, sans-serif", fontSize: "0.95rem", maxWidth: 520, margin: "0 auto" }}>
-=======
               <span style={{ display: "inline-block", fontFamily: "Poppins, sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.3em", textTransform: "uppercase", color: "#8B1E2D", background: "rgba(139,30,45,0.08)", border: "1.5px solid rgba(139,30,45,0.2)", borderRadius: 50, padding: "5px 18px", marginBottom: 14 }}>
                 What We Offer
               </span>
@@ -86,7 +80,6 @@ const CoursesSection = ({ hideHeader }: { hideHeader?: boolean }) => {
                 Our Arts &amp; <span style={{ background: "linear-gradient(135deg, #8B1E2D, #B7323C)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Music</span>
               </h2>
               <p style={{ color: "#777", fontFamily: "Poppins, sans-serif", fontSize: "0.95rem", maxWidth: 520, margin: "0 auto" }}>
->>>>>>> 574b394 (Preview Added)
                 Explore our expertly designed courses for all ages and skill levels — from painting and sketching to pottery and music.
               </p>
             </motion.div>
@@ -106,14 +99,10 @@ const CoursesSection = ({ hideHeader }: { hideHeader?: boolean }) => {
                 </div>
                 <div className="p-5 md:p-6">
                   <h3 className="font-heading font-bold text-lg text-white">{course.title}</h3>
-<<<<<<< HEAD
-                  <p className="mt-2 text-sm text-white/90 font-body">{course.desc}</p>
-=======
                   <p className="mt-2 text-sm text-white/80 font-body">{course.desc}</p>
->>>>>>> 574b394 (Preview Added)
                   <button
                     onClick={() => { navigate("/gallery"); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-                    className="mt-4 text-sm font-button font-medium py-[0.4rem] px-5 rounded-full border-[1.5px] border-[#B7323C] bg-gradient-to-r from-[#B7323C]/20 to-transparent hover:bg-[#B7323C] text-white transition-colors duration-300"
+                    className="btn-gradient mt-4 text-sm py-2 px-5"
                   >
                     Show Details
                   </button>

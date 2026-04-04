@@ -111,11 +111,7 @@ const WorkshopsPage = () => {
                     "https://lh3.googleusercontent.com/p/AF1QipO9M6t8cqUT14niDnEg1f9amr3rmdcVtiu4XbRo=w1024",
                     "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerREN27u8k_sawHp1RblSV-INnE59Q85ylXNW7BUgov8KxNkNwFNm3KXMKGU0VkUFNXe21U6IyFHpyy2cg3KqHaxt66bDLaMpoHxfdkSrsKvGcN=w1024"
                   ].map((src, i) => (
-<<<<<<< HEAD
-                    <motion.div key={src} initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.1 }} style={{ borderRadius: 16, overflow: "hidden", border: "2px solid rgba(212,175,55,0.15)", boxShadow: "0 8px 30px rgba(139,30,45,0.12)", cursor: "pointer", background: "#f8f8f8" }}>
-=======
                     <motion.div key={i} initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.1 }} style={{ borderRadius: 16, overflow: "hidden", border: "2px solid rgba(212,175,55,0.15)", boxShadow: "0 8px 30px rgba(139,30,45,0.12)", cursor: "pointer", background: "#f8f8f8" }}>
->>>>>>> 574b394 (Preview Added)
                       <img src={src} alt="Workshop" style={{ width: "100%", height: 260, objectFit: "cover", display: "block", transition: "transform 0.5s ease" }} className="ws-gallery-img" onError={(e) => { e.currentTarget.style.opacity = '0.3' }} referrerPolicy="no-referrer" crossOrigin="anonymous" loading="lazy" />
                     </motion.div>
                   ))}
