@@ -213,7 +213,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.75 }}
           style={{ display: "inline-flex", alignItems: "center", background: "rgba(var(--secondary-rgb),0.7)", backdropFilter: "blur(18px)", border: "1px solid rgba(var(--accent-rgb),0.22)", borderRadius: 50, padding: "8px 6px", boxShadow: "0 6px 24px rgba(0,0,0,0.35)" }}
         >
-          {[{ n: "10+", l: "Years" }, { n: "1000+", l: "Students" }, { n: "15+", l: "Courses" }].map((s, i, arr) => (
+          {[{ n: "13+", l: "Years" }, { n: "1000+", l: "Students" }, { n: "15+", l: "Courses" }].map((s, i, arr) => (
             <div key={s.l} style={{ display: "flex", alignItems: "center" }}>
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "0 20px" }}>
                 <span style={{ color: "var(--accent)", fontWeight: 800, fontSize: "1rem", fontFamily: "Playfair Display, Georgia, serif", lineHeight: 1 }}>{s.n}</span>

@@ -9,17 +9,18 @@ import AchievementsSection from "@/components/AchievementsSection";
 import affiliationCert from "@/assets/affiliation-cert.jpg";
 import isoCert from "@/assets/iso-cert.jpg";
 import justdialCert from "@/assets/justdial-cert.jpg";
+import maxCert from "@/assets/max-certificate.jpg";
 import { motion } from "framer-motion";
 import { Trophy, Star, Users, BookOpen, Award, Heart, Globe, School } from "lucide-react";
 
 const milestones = [
-  { year: "2014", title: "Academy Founded", desc: "Konkala Fine Arts established in Madhapur, Hyderabad with a vision to make quality art education accessible." },
+  { year: "2013", title: "Academy Founded", desc: "Konkala Fine Arts established in Madhapur, Hyderabad with a vision to make quality art education accessible." },
   { year: "2016", title: "100 Students Milestone", desc: "Within two years, the academy crossed 100 enrolled students across painting, sketching, and music programs." },
   { year: "2018", title: "Expanded to Music", desc: "Launched guitar and vocal training programs, completing the arts & music vision of the academy." },
   { year: "2020", title: "Online Classes Launched", desc: "Adapted during the pandemic by successfully launching online classes, maintaining quality and continuity." },
   { year: "2022", title: "Community Outreach", desc: "Conducted workshops across 10+ schools, bringing quality art education to underprivileged communities." },
   { year: "2023", title: "Best Art Academy Award", desc: "Recognized with the Best Art Academy award at the Hyderabad Cultural Awards for outstanding contribution to arts education." },
-  { year: "2024", title: "500+ Students Trained", desc: "A proud milestone — over 500 students trained across all disciplines, ages 5 to 60+." },
+  { year: "2024", title: "1000+ Students Trained", desc: "A proud milestone — over 500 students trained across all disciplines, ages 5 to 60+." },
   { year: "2025", title: "20+ Schools Reached", desc: "Community art workshops expanded to 20+ schools across Hyderabad, inspiring thousands of young minds." },
 ];
 
@@ -37,7 +38,7 @@ const AchievementsPage = () => (
 
         {/* Certifications & Affiliations */}
         <section style={{ padding: "clamp(60px,8vh,100px) 0", background: "linear-gradient(135deg, #1A0508, #2E0A12)" }}>
-          <div className="container" style={{ maxWidth: 1000 }}>
+          <div className="container" style={{ maxWidth: 1280 }}>
             <motion.div
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               style={{ textAlign: "center", marginBottom: "clamp(40px,6vh,60px)" }}
@@ -47,23 +48,37 @@ const AchievementsPage = () => (
               </h2>
             </motion.div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 32, justifyItems: "center" }}>
-              <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-                style={{ background: "rgba(255,255,255,0.05)", padding: 16, borderRadius: 20, border: "1px solid rgba(212,175,55,0.3)", boxShadow: "0 8px 32px rgba(0,0,0,0.3)", maxWidth: 400 }}>
-                <img src={affiliationCert} alt="Sarbabharatiya Sangeet-O-Sanskriti Parishad Affiliation" style={{ width: "100%", height: "auto", borderRadius: 12 }} />
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24, justifyItems: "center" }}>
+              <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
+                style={{ background: "rgba(255,255,255,0.05)", padding: 16, borderRadius: 20, border: "1px solid rgba(212,175,55,0.3)", boxShadow: "0 8px 32px rgba(0,0,0,0.3)", maxWidth: 500, width: "100%", display: "flex", flexDirection: "column" }}>
+                <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                  <img src={affiliationCert} alt="Sarbabharatiya Sangeet-O-Sanskriti Parishad Affiliation" style={{ width: "100%", height: 320, objectFit: "contain", borderRadius: 12 }} />
+                </div>
                 <p style={{ color: "#F0D080", fontFamily: "Poppins, sans-serif", fontWeight: 600, textAlign: "center", marginTop: 16, fontSize: "1.1rem" }}>Affiliation Certificate</p>
               </motion.div>
 
-              <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.3 }}
-                style={{ background: "rgba(255,255,255,0.05)", padding: 16, borderRadius: 20, border: "1px solid rgba(212,175,55,0.3)", boxShadow: "0 8px 32px rgba(0,0,0,0.3)", maxWidth: 400 }}>
-                <img src={isoCert} alt="ISO 9001:2015 Certification" style={{ width: "100%", height: "auto", borderRadius: 12 }} />
-                 <p style={{ color: "#F0D080", fontFamily: "Poppins, sans-serif", fontWeight: 600, textAlign: "center", marginTop: 16, fontSize: "1.1rem" }}>ISO 9001:2015 Certification</p>
+              <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
+                style={{ background: "rgba(255,255,255,0.05)", padding: 16, borderRadius: 20, border: "1px solid rgba(212,175,55,0.3)", boxShadow: "0 8px 32px rgba(0,0,0,0.3)", maxWidth: 500, width: "100%", display: "flex", flexDirection: "column" }}>
+                <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                  <img src={isoCert} alt="ISO 9001:2015 Certification" style={{ width: "100%", height: 320, objectFit: "contain", borderRadius: 12 }} />
+                </div>
+                 <p style={{ color: "#F0D080", fontFamily: "Poppins, sans-serif", fontWeight: 600, textAlign: "center", marginTop: 16, fontSize: "1.1rem" }}>ISO 9001:2015</p>
               </motion.div>
 
-              <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.5 }}
-                style={{ background: "rgba(255,255,255,0.05)", padding: 16, borderRadius: 20, border: "1px solid rgba(212,175,55,0.3)", boxShadow: "0 8px 32px rgba(0,0,0,0.3)", maxWidth: 400 }}>
-                <img src={justdialCert} alt="JustDial Certified 2020" style={{ width: "100%", height: "auto", borderRadius: 12 }} />
-                <p style={{ color: "#F0D080", fontFamily: "Poppins, sans-serif", fontWeight: 600, textAlign: "center", marginTop: 16, fontSize: "1.1rem" }}>JustDial Certified — 5 Stars</p>
+              <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}
+                style={{ background: "rgba(255,255,255,0.05)", padding: 16, borderRadius: 20, border: "1px solid rgba(212,175,55,0.3)", boxShadow: "0 8px 32px rgba(0,0,0,0.3)", maxWidth: 500, width: "100%", display: "flex", flexDirection: "column" }}>
+                <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                  <img src={justdialCert} alt="JustDial Certified 2020" style={{ width: "100%", height: 320, objectFit: "contain", borderRadius: 12 }} />
+                </div>
+                <p style={{ color: "#F0D080", fontFamily: "Poppins, sans-serif", fontWeight: 600, textAlign: "center", marginTop: 16, fontSize: "1.1rem" }}>JustDial 5 Stars</p>
+              </motion.div>
+
+              <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}
+                style={{ background: "rgba(255,255,255,0.05)", padding: 16, borderRadius: 20, border: "1px solid rgba(212,175,55,0.3)", boxShadow: "0 8px 32px rgba(0,0,0,0.3)", maxWidth: 500, width: "100%", display: "flex", flexDirection: "column" }}>
+                <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                  <img src={maxCert} alt="Max Kids Festival Certification" style={{ width: "100%", height: 320, objectFit: "cover", objectPosition: "center top", borderRadius: 12 }} />
+                </div>
+                <p style={{ color: "#F0D080", fontFamily: "Poppins, sans-serif", fontWeight: 600, textAlign: "center", marginTop: 16, fontSize: "1.1rem" }}>Student Award</p>
               </motion.div>
             </div>
           </div>
@@ -123,6 +138,11 @@ const AchievementsPage = () => (
         .timeline-item { justify-content: flex-end !important; padding-left: 44px; }
         .timeline-item > div:last-child { width: 100% !important; }
         .timeline-item > div:first-child { left: 14px !important; }
+      @media (min-width: 1024px) {
+        .cert-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; justify-items: center; }
+      }
+      @media (max-width: 1023px) {
+        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; justify-items: center; }
       }
     `}</style>
   </>

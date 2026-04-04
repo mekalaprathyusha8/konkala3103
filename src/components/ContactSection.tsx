@@ -28,7 +28,7 @@ const contactItems = [
   {
     icon: Clock,
     title: "Working Hours",
-    content: "Monday – Saturday: 9:00 AM – 9:00 PM\nSunday: Closed",
+    content: "Monday – Saturday: 10:00 AM – 9:00 PM\nSunday: Closed",
     href: null,
     isLink: false,
   },
@@ -36,7 +36,7 @@ const contactItems = [
 
 const stats = [
   { value: "1000+", label: "Happy Students" },
-  { value: "10+", label: "Years Experience" },
+  { value: "13+", label: "Years Experience" },
   { value: "15+", label: "Courses Offered" },
   { value: "4.9★", label: "Google Rating" },
 ];
@@ -135,7 +135,7 @@ const ContactSection = ({ hideHeader }: { hideHeader?: boolean }) => {
           {/* CTA card */}
           <motion.div
             initial={{ opacity: 0, x: 30 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.7, delay: 0.3 }}
-            style={{ background: "linear-gradient(155deg, #1A0508, #2E0A12, #3D0E18)", borderRadius: 20, padding: "36px 28px", display: "flex", flexDirection: "column", gap: 20, border: "1.5px solid rgba(212,175,55,0.2)", boxShadow: "0 12px 40px rgba(0,0,0,0.25)" }}
+            style={{ background: "linear-gradient(155deg, #1A0508, #2E0A12, #3D0E18)", borderRadius: 20, padding: "36px 28px", display: "flex", flexDirection: "column", gap: 20, border: "1.5px solid rgba(212,175,55,0.2)", boxShadow: "0 12px 40px rgba(0,0,0,0.25)", justifyContent: "center" }}
           >
             <div>
               <span style={{ display: "inline-block", fontFamily: "Poppins, sans-serif", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.3em", textTransform: "uppercase", color: "#D4AF37", background: "rgba(212,175,55,0.1)", borderRadius: 50, padding: "4px 14px", marginBottom: 14 }}>
@@ -168,7 +168,7 @@ const ContactSection = ({ hideHeader }: { hideHeader?: boolean }) => {
 
             <div style={{ display: "flex", gap: 10, justifyContent: "center" }}>
               {[
-                { href: "https://instagram.com/konkala_finearts", Icon: Instagram },
+                { href: "https://www.instagram.com/konkala_finearts?igsh=MTY4dDNkaW5vd2UweQ==", Icon: Instagram },
                 { href: "https://facebook.com/KonkalaFINEARTS", Icon: Facebook },
               ].map(({ href, Icon }) => (
                 <a key={href} href={href} target="_blank" rel="noreferrer"

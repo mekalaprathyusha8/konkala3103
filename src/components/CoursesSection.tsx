@@ -4,8 +4,8 @@ import { X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import paintingImg from "@/assets/student-painting-ganesha.jpg";
 import potteryImg from "@/assets/pottery-class.jpg";
-import musicImg from "@/assets/guitar-class-3.jpg";
-import sketchCardImg from "@/assets/student-sketch-1.jpg";
+import musicImg from "@/assets/new-guitar-kids.jpg";
+import sketchCardImg from "@/assets/new-sketch-dancer.jpg";
 
 const courseGalleries: Record<string, string[]> = {
   "Pencil Sketch Classes": [
@@ -24,7 +24,6 @@ const courseGalleries: Record<string, string[]> = {
     "https://scontent.fhyd14-1.fna.fbcdn.net/v/t39.30808-6/494035677_1255690023234245_7712440679703552337_n.jpg?stp=c241.0.959.959a_dst-jpg_s206x206_tt6&_nc_cat=103&ccb=1-7&_nc_sid=a934a8&_nc_ohc=_VhJ_NuEs3AQ7kNvwGCozcF&_nc_oc=Adn82RzXR5YnfTAhWDpd-VAfI1h3kAYJ-APxLjStv85zE8UfsWz9knStE0tKbeVfvyMJxFIbsYf_bfR_ebAc755b&_nc_zt=23&_nc_ht=scontent.fhyd14-1.fna&_nc_gid=KpIXhsSZNDOppnLoFueMpg&_nc_ss=8&oh=00_AfwrJzmW-VdaupMDEwH6yc2yJwKVMI3cRBCszOaKBazIBg&oe=69B9DBD3",
     "https://scontent.fhyd14-3.fna.fbcdn.net/v/t39.30808-6/491420127_1244647564338491_3238621271992162269_n.jpg?stp=c0.119.1440.1440a_dst-jpg_s206x206_tt6&_nc_cat=111&ccb=1-7&_nc_sid=a934a8&_nc_ohc=VeJwyM6D5gYQ7kNvwFo2fYK&_nc_oc=AdnSd_7ixAZxoGnG21XKfeYUOw5sZ_HErb-xc9lvs2lvJPa3wXvOFHfEuoi2T-9grm-SdhX8r4ZHWKk9uK2T2nts&_nc_zt=23&_nc_ht=scontent.fhyd14-3.fna&_nc_gid=SljmfIvnRaFxd7vgG7RBbA&_nc_ss=8&oh=00_AfzBGeLGIsU4Q6_SpnxshTBWLfD_n1YLgM36baXmgGCMdA&oe=69B9DF44",
     "https://scontent.fhyd14-1.fna.fbcdn.net/v/t39.30808-6/486104455_1218789126924335_5072669824661294486_n.jpg?stp=c0.70.1836.1836a_dst-jpg_s206x206_tt6&_nc_cat=102&ccb=1-7&_nc_sid=a934a8&_nc_ohc=kWLroFTq-jwQ7kNvwGMuw5m&_nc_oc=Adn9k0QJRw2TWg9Xf9aVvLWeAn6UkMNPhdEIdcD6isvbRUk_rLB7AV3jcxekYJzElC4bq1IjB200DlF1AHbTW3zb&_nc_zt=23&_nc_ht=scontent.fhyd14-1.fna&_nc_gid=vl1qQtRUiPry3ZAfixHC_Q&_nc_ss=8&oh=00_Afx9eXGjJnopVdRGBSILvU1WkOJkFEmbJ9ajD6bwYhlsSQ&oe=69B9EB7F",
-    "https://scontent.fhyd14-4.fna.fbcdn.net/v/t39.30808-6/484810974_1215132793956635_3280864834413562387_n.jpg?stp=c149.0.1750.1750a_dst-jpg_s206x206_tt6&_nc_cat=109&ccb=1-7&_nc_sid=a934a8&_nc_ohc=g7ISlsYPxlMQ7kNvwHWbkRW&_nc_oc=AdmMUlJJhMvC7c5oNAh88n76mLYbOo-UfhXXjBudA0944P6Vhyb5rNKTayxD0o-43w93fEW0KZy7SPgC4xM1Adp2&_nc_zt=23&_nc_ht=scontent.fhyd14-4.fna&_nc_gid=xygKlOkBAVuLTdu-2F6AGQ&_nc_ss=8&oh=00_AfyzFveallCD1PmtbUa4gv4dmp-vcg_O-EizCG3q-06H0A&oe=69B9D251",
     "https://scontent.fhyd14-4.fna.fbcdn.net/v/t39.30808-6/484490020_1212146960921885_507284398246441088_n.jpg?stp=c237.0.1575.1575a_dst-jpg_s206x206_tt6&_nc_cat=107&ccb=1-7&_nc_sid=a934a8&_nc_ohc=jCQZ3xTAji0Q7kNvwFNjk5a&_nc_oc=AdmZOjn5fbuvNXvP-h-QweyDUYlUj1Wa8nv5qm_aYcwpxH3SLG_F3HONLiLxr_gCPz2Tai2FHWL9ypng6zm6NgxR&_nc_zt=23&_nc_ht=scontent.fhyd14-4.fna&_nc_gid=cBo1y2I2hEAnEVA_Bcy64g&_nc_ss=8&oh=00_Afwl4CMpbTqXgg0C9b3AbS6OUB9pD4YE-Lk3UhgPqMMy6Q&oe=69B9BCC0",
     "https://scontent.fhyd14-4.fna.fbcdn.net/v/t39.30808-6/484793529_1213052004164714_5001283046493830657_n.jpg?stp=c409.0.1230.1230a_dst-jpg_s206x206_tt6&_nc_cat=107&ccb=1-7&_nc_sid=a934a8&_nc_ohc=x3_QjduhCmcQ7kNvwECJDAA&_nc_oc=AdngTi2mFC9cCsghaytTpWyuNJ8Ems_LiYfYeBjHOeDZfLMtfFI-4SXzhu8yFCrgHWCAx9atMGlXYCb8QGIchbTn&_nc_zt=23&_nc_ht=scontent.fhyd14-4.fna&_nc_gid=TWFxyaXLy0b8vslRE5Av5Q&_nc_ss=8&oh=00_Afy4m9wLush-rdT_MDFHjA0OB1agKPNnmRqKn29tCosm5g&oe=69B9DEC6",
     "https://scontent.fhyd14-3.fna.fbcdn.net/v/t39.30808-6/548272950_1373453878124525_7534904981849831829_n.jpg?stp=c0.89.1080.1080a_dst-jpg_s206x206_tt6&_nc_cat=111&ccb=1-7&_nc_sid=a934a8&_nc_ohc=WWiPRF4ZTkMQ7kNvwFv7zZh&_nc_oc=AdlvPPnkYeRdcHHfGdyI-_nD0_IZW4LT3NIlgxWLlLbWf3Ahfv33mTg_xs0gZNlugSmAM_Wj0suiDCXrCbpRXqjQ&_nc_zt=23&_nc_ht=scontent.fhyd14-3.fna&_nc_gid=X_EPfDSAIU47JkGWx4CeZg&_nc_ss=8&oh=00_AfzUSmQTl7zzVaxihBZEBPNXj6d4YHaDVUL4-HkxE-sB5w&oe=69B9CC9C",
@@ -63,7 +62,7 @@ const CoursesSection = ({ hideHeader }: { hideHeader?: boolean }) => {
 
   return (
     <>
-      <section id="courses" className="py-16 md:py-24 bg-card" ref={ref}>
+      <section id="courses" className="py-16 md:py-24" style={{ background: "#F7F3EB" }} ref={ref}>
         <div className="container">
           
           {/* Section Heading */}
@@ -74,10 +73,20 @@ const CoursesSection = ({ hideHeader }: { hideHeader?: boolean }) => {
               transition={{ duration: 0.6 }}
               style={{ textAlign: "center", marginBottom: "clamp(32px,5vh,52px)" }}
             >
+<<<<<<< HEAD
               <h2 style={{ fontFamily: "Playfair Display, Georgia, serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", fontWeight: 900, color: "#8B2E2E", lineHeight: 1.2, marginBottom: 12 }}>
                 Our Arts &amp; Music
               </h2>
               <p style={{ color: "#555", fontFamily: "Poppins, sans-serif", fontSize: "0.95rem", maxWidth: 520, margin: "0 auto" }}>
+=======
+              <span style={{ display: "inline-block", fontFamily: "Poppins, sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.3em", textTransform: "uppercase", color: "#8B1E2D", background: "rgba(139,30,45,0.08)", border: "1.5px solid rgba(139,30,45,0.2)", borderRadius: 50, padding: "5px 18px", marginBottom: 14 }}>
+                What We Offer
+              </span>
+              <h2 style={{ fontFamily: "Playfair Display, Georgia, serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", fontWeight: 900, color: "#5C0F1A", lineHeight: 1.2, marginBottom: 12 }}>
+                Our Arts &amp; <span style={{ background: "linear-gradient(135deg, #8B1E2D, #B7323C)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Music</span>
+              </h2>
+              <p style={{ color: "#777", fontFamily: "Poppins, sans-serif", fontSize: "0.95rem", maxWidth: 520, margin: "0 auto" }}>
+>>>>>>> 574b394 (Preview Added)
                 Explore our expertly designed courses for all ages and skill levels — from painting and sketching to pottery and music.
               </p>
             </motion.div>
@@ -97,7 +106,11 @@ const CoursesSection = ({ hideHeader }: { hideHeader?: boolean }) => {
                 </div>
                 <div className="p-5 md:p-6">
                   <h3 className="font-heading font-bold text-lg text-white">{course.title}</h3>
+<<<<<<< HEAD
                   <p className="mt-2 text-sm text-white/90 font-body">{course.desc}</p>
+=======
+                  <p className="mt-2 text-sm text-white/80 font-body">{course.desc}</p>
+>>>>>>> 574b394 (Preview Added)
                   <button
                     onClick={() => { navigate("/gallery"); window.scrollTo({ top: 0, behavior: "smooth" }); }}
                     className="mt-4 text-sm font-button font-medium py-[0.4rem] px-5 rounded-full border-[1.5px] border-[#B7323C] bg-gradient-to-r from-[#B7323C]/20 to-transparent hover:bg-[#B7323C] text-white transition-colors duration-300"

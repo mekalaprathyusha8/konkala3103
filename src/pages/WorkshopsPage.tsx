@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 const workshops = [
   { title: "Weekend Painting Workshop", batch: "Weekend batches", duration: "3 Hours", icon: Palette, desc: "Explore acrylic and watercolor techniques in our guided weekend sessions with professional artists. Perfect for beginners and intermediate learners.", details: ["Acrylic & watercolor techniques", "Canvas preparation & color mixing", "Landscape & portrait painting", "Certificate on completion"], color: "#D4AF37" },
   { title: "Summer Art Camp", batch: "Weekday batches", duration: "2 Weeks", icon: Sparkles, desc: "An immersive summer program covering drawing, painting, pottery and craft activities for all ages. The highlight of every summer!", details: ["Drawing, painting & pottery", "Craft & mixed media", "Art exhibition at the end", "Open to all skill levels"], color: "#8B1E2D" },
-  { title: "Pottery Weekend Special", batch: "Weekend batches", duration: "4 Hours", icon: Calendar, desc: "Hands-on pottery experience — learn wheel throwing, hand building and glazing techniques from our expert pottery instructor.", details: ["Wheel throwing basics", "Hand building & coiling", "Glazing & finishing", "Take home your creations"], color: "#B7323C" },
+  { title: "Pottery Weekend Special", batch: "Weekend batches", duration: "4 Hours", icon: Calendar, desc: "Hands-on pottery experience — learn wheel throwing, hand building and glazing techniques from our expert pottery instructor.", details: [ "Hand building & coiling", "Glazing & finishing", "Take home your creations"], color: "#B7323C" },
   { title: "Music Jam Session", batch: "Weekday batches", duration: "2 Hours", icon: Music, desc: "Interactive music sessions covering guitar, keyboard, vocals and rhythm training in a fun, collaborative group setting.", details: ["Guitar & keyboard basics", "Vocal warm-ups & techniques", "Rhythm & beat training", "Group jam performance"], color: "#D4AF37" },
   { title: "Sketch Marathon", batch: "Monthly event", duration: "5 Hours", icon: Users, desc: "A full-day sketching challenge covering portrait, landscape and still life drawing. Competitive and collaborative at the same time.", details: ["Portrait & figure sketching", "Landscape composition", "Still life techniques", "Awards for best sketches"], color: "#8B1E2D" },
   { title: "Kids Art Fiesta", batch: "Holiday special", duration: "3 Hours", icon: Clock, desc: "Fun-filled creative activities designed for young aspiring artists aged 4-12. A perfect holiday activity full of colour and creativity!", details: ["Finger painting & collage", "Clay modelling", "Story-based art activities", "Prizes & certificates"], color: "#B7323C" },
@@ -111,7 +111,11 @@ const WorkshopsPage = () => {
                     "https://lh3.googleusercontent.com/p/AF1QipO9M6t8cqUT14niDnEg1f9amr3rmdcVtiu4XbRo=w1024",
                     "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerREN27u8k_sawHp1RblSV-INnE59Q85ylXNW7BUgov8KxNkNwFNm3KXMKGU0VkUFNXe21U6IyFHpyy2cg3KqHaxt66bDLaMpoHxfdkSrsKvGcN=w1024"
                   ].map((src, i) => (
+<<<<<<< HEAD
                     <motion.div key={src} initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.1 }} style={{ borderRadius: 16, overflow: "hidden", border: "2px solid rgba(212,175,55,0.15)", boxShadow: "0 8px 30px rgba(139,30,45,0.12)", cursor: "pointer", background: "#f8f8f8" }}>
+=======
+                    <motion.div key={i} initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.1 }} style={{ borderRadius: 16, overflow: "hidden", border: "2px solid rgba(212,175,55,0.15)", boxShadow: "0 8px 30px rgba(139,30,45,0.12)", cursor: "pointer", background: "#f8f8f8" }}>
+>>>>>>> 574b394 (Preview Added)
                       <img src={src} alt="Workshop" style={{ width: "100%", height: 260, objectFit: "cover", display: "block", transition: "transform 0.5s ease" }} className="ws-gallery-img" onError={(e) => { e.currentTarget.style.opacity = '0.3' }} referrerPolicy="no-referrer" crossOrigin="anonymous" loading="lazy" />
                     </motion.div>
                   ))}

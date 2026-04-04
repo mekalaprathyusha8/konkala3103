@@ -37,15 +37,28 @@ function AboutSection() {
             initial={{ opacity: 0, x: -40 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.8 }}
             style={{ display: "flex", justifyContent: "center" }}
           >
-            <div style={{
-              borderRadius: 16, overflow: "hidden",
-              boxShadow: "0 8px 32px rgba(0,0,0,0.15)",
-              maxWidth: 420, width: "100%",
-            }}>
-              <img
-                src={founderImg}
-                alt="Madhu Kuruva - Founder"
-                style={{ width: "100%", aspectRatio: "3/4", objectFit: "cover", objectPosition: "center top", display: "block" }} />
+            <div style={{ maxWidth: 420, width: "100%" }}>
+              <div style={{
+                borderRadius: 16, overflow: "hidden",
+                boxShadow: "0 8px 32px rgba(0,0,0,0.15)",
+                width: "100%",
+              }}>
+                <img
+                  src={founderImg}
+                  alt="Madhu Kuruva - Founder"
+                  style={{ width: "100%", aspectRatio: "4/5", objectFit: "cover", objectPosition: "center top", display: "block" }} />
+              </div>
+              <div style={{
+                paddingTop: "20px",
+                textAlign: "center"
+              }}>
+                <h3 style={{ fontFamily: "Playfair Display, serif", fontSize: "1.6rem", fontWeight: 700, marginBottom: 6, color: "#5C0F1A" }}>
+                  Madhu Kuruva
+                </h3>
+                <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "0.9rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", margin: 0, color: "#8B1E2D" }}>
+                  Founder & Lead Art Instructor
+                </p>
+              </div>
             </div>
           </motion.div>
 
@@ -55,9 +68,6 @@ function AboutSection() {
             style={{ paddingTop: 16 }}
           >
             <div style={{ marginBottom: 24, lineHeight: 1.8 }}>
-              <h3 style={{ color: "#5C0F1A", fontFamily: "Playfair Display, serif", fontSize: "1.4rem", fontWeight: 700, marginBottom: 16 }}>
-                Artist Bio – <span style={{ color: "#D4AF37" }}>Madhu Kuruva</span>
-              </h3>
               <p style={{ color: "#555", fontFamily: "Poppins, sans-serif", fontSize: "0.97rem", marginBottom: 14 }}>
                 Born in 1980, <strong style={{ color: "#8B1E2D" }}>Madhu Kuruva</strong> is a visual artist whose works merge tradition, culture, and spirituality with deep emotional resonance. He holds a BFA in Painting from Sri Venkateshwara College of Fine Arts, Hyderabad, and an MFA in Painting from Jawaharlal Nehru Architecture and Fine Arts University (JNAFAU).
               </p>

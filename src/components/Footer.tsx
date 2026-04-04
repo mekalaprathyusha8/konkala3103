@@ -41,7 +41,7 @@ const Footer = () => {
             </p>
             <div style={{ display: "flex", alignItems: "center", gap: 8, color: "#E5E5E5" }}>
               <Clock size={15} style={{ color: "#D4AF37", flexShrink: 0 }} />
-              <span style={{ fontFamily: "Poppins, sans-serif", fontSize: "0.83rem", fontWeight: 700, color: "#FFFFFF" }}>Mon–Sat: 9:00 AM – 9:00 PM</span>
+              <span style={{ fontFamily: "Poppins, sans-serif", fontSize: "0.83rem", fontWeight: 700, color: "#FFFFFF" }}>Mon–Sat: 10:00 AM – 9:00 PM</span>
             </div>
           </div>
 
@@ -94,7 +94,7 @@ const Footer = () => {
             <h4 style={{ fontFamily: "Playfair Display, Georgia, serif", fontWeight: 700, color: "#D4AF37", marginBottom: 18, fontSize: "1.05rem" }}>Follow Us</h4>
             <div style={{ display: "flex", gap: 12, marginBottom: 24 }}>
               {[
-                { href: "https://instagram.com/konkala_finearts", Icon: Instagram, label: "Instagram" },
+                { href: "https://www.instagram.com/konkala_finearts?igsh=MTY4dDNkaW5vd2UweQ==", Icon: Instagram, label: "Instagram" },
                 { href: "https://facebook.com/KonkalaFINEARTS", Icon: Facebook, label: "Facebook" },
               ].map(({ href, Icon, label }) => (
                 <a

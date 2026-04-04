@@ -6,25 +6,25 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { motion } from "framer-motion";
 
 // Using existing assets for placeholder images
-import SketchImg from "@/assets/student-sketch-1.jpg";
-import PotteryImg from "@/assets/pottery-class.jpg";
-import PaintingImg from "@/assets/student-painting-ganesha.jpg";
+import TrainingImg from "@/assets/service-1.jpg";
+import LongTermImg from "@/assets/service-3.jpg";
+import WorkshopImg from "@/assets/service-2.jpg";
 
 const services = [
   {
     title: "Training / Internship",
     description: "Hands-on professional training and internships for aspiring artists. Gain real-world experience, build your portfolio, and learn from industry experts under personalized guidance.",
-    img: PaintingImg,
+    img: TrainingImg,
   },
   {
     title: "Long Term Course",
     description: "An immersive program covering everything from fundamentals to advanced techniques. Tailored for dedicated students who want to deeply master painting, sketching, and traditional arts.",
-    img: SketchImg, // Portrait/Sketch
+    img: LongTermImg,
   },
   {
     title: "Workshop",
     description: "Short-term intensive workshops focusing on specific mediums like clay modeling, pottery, acrylics, or specialized crafts. Perfect for quick learning and weekend activities.",
-    img: PotteryImg, // Workshop vibe
+    img: WorkshopImg,
   }
 ];
 
@@ -37,7 +37,7 @@ const ServicesPage = () => {
         <div className="pt-16">
           <PageHero title="Our" highlight="Services" subtitle="Explore our premier training programs, professional internships, and intensive workshops." />
           
-          <section className="py-16 md:py-24">
+          <section className="py-16 md:py-24" style={{ background: "#F7F3EB" }}>
             <div className="container">
               <div className="grid md:grid-cols-3 gap-8 md:gap-12">
                 {services.map((service, i) => (

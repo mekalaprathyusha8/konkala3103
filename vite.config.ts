@@ -13,7 +13,10 @@ export default defineConfig({
     port: 5173,
     open: true,
     allowedHosts: [
+<<<<<<< HEAD
       // "unpraiseful-dede-convocational.ngrok-free.dev",
+=======
+>>>>>>> 574b394 (Preview Added)
       "heterographical-june-indistinguishably.ngrok-free.dev",
     ],
   },
