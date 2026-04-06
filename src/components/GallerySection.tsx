@@ -25,10 +25,7 @@ import wsPic3 from "@/assets/workshop-3.jpg";
 import wsPic4 from "@/assets/workshop-4.jpg";
 
 const GALLERY_IMAGES = [
-<<<<<<< HEAD
   { src: "https://lh3.googleusercontent.com/p/AF1QipOb2ScziwHt-JCb7LZSAmndL0BQ_j0FP3_djZS3=w1024", label: "Painting" },
-=======
->>>>>>> e130932c44c11db80093fe8d5bae83e349055f43
   { src: wsPic1, label: "Workshop" },
   { src: wsPic2, label: "Workshop" },
   { src: wsPic3, label: "Workshop" },
@@ -49,10 +46,7 @@ const GALLERY_IMAGES = [
   { src: "https://scontent.fhyd14-4.fna.fbcdn.net/v/t1.6435-9/56276026_2143072242452668_8755627064410767360_n.jpg?stp=c296.0.560.560a_dst-jpg_s206x206_tt6&_nc_cat=107&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=Yav2NsNsLl8Q7kNvwG8311y&_nc_oc=AdqhWUTRbRWHR81TAOBll51Na7No6t1DZw4OAII674hhVIT7qKETaqiX7EjSunNoJ1NIvj8p8iSFu7PAk132nJCg&_nc_zt=23&_nc_ht=scontent.fhyd14-4.fna&_nc_gid=pTJdJdKV0-t6sjddDxM1Sw&_nc_ss=7a389&oh=00_AfzIkmk0xSigNBvNgwfha-yZ8herufoEDl3LDOcx247CwQ&oe=69F35D98", label: "Painting" },
   { src: "https://scontent.fhyd11-3.fna.fbcdn.net/v/t39.30808-6/657045560_1552118590258052_7082879608941914848_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=106&ccb=1-7&_nc_sid=a934a8&_nc_ohc=20Zo74jiWNUQ7kNvwHir-RE&_nc_oc=Adrz4YHly1WSIaDOjs8_4AbWjZtS7zj8EZ6YB7wRzf9Cn7KgRllPlzhrT6viqJ93-Fc&_nc_zt=23&_nc_ht=scontent.fhyd11-3.fna&_nc_gid=56IeRRTsl9d3DcyAr5_QlA&_nc_ss=7a389&oh=00_Af3WXuZgBs3-B2UdMNZX3o4iq_x4zQw6xCYw4DbTVOcjSg&oe=69D2BE06", label: "Painting" },
   { src: "https://scontent.fhyd11-2.fna.fbcdn.net/v/t39.30808-6/484900016_1216383930498188_3536249595592758735_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_ohc=MIyoCrztn1YQ7kNvwH3OBfh&_nc_oc=AdrunzFpvG5-LsyiwmCZdMp4IcvHctbGILVqfDxhoM9erxosnFK4EOHYq12Rc589xC4&_nc_zt=23&_nc_ht=scontent.fhyd11-2.fna&_nc_gid=NQPswnFSOtA3zUMClmhlaQ&_nc_ss=7a389&oh=00_Af2zBchbwRg7XzxeedsazGfRnd__-kHx6wOikqrUbNiaLA&oe=69D2B36F", label: "Painting" },
-<<<<<<< HEAD
   { src: "https://scontent.fhyd11-3.fna.fbcdn.net/v/t39.30808-6/484810974_1215132793956635_3280864834413562387_n.jpg?stp=c149.0.1750.1750a_dst-jpg_s206x206_tt6&_nc_cat=109&ccb=1-7&_nc_sid=a934a8&_nc_ohc=-LMHh75LF7MQ7kNvwFLngNH&_nc_oc=AdplkN-AbQymbzxohLU8eXykrQShXHZp9WLF3xbLM29MVHZvRsmsixvEjRKjqHEA3m0&_nc_zt=23&_nc_ht=scontent.fhyd11-3.fna&_nc_gid=_VsL1FLc1KDqUEpdbmq7PQ&_nc_ss=7a389&oh=00_Af1DK9hT9Im2VG0COvhurpkBh-c2OyZgRUNQS2tT7afTHg&oe=69D2DED1", label: "Painting" },
-=======
->>>>>>> e130932c44c11db80093fe8d5bae83e349055f43
   { src: "https://scontent.fhyd11-1.fna.fbcdn.net/v/t39.30808-6/483108195_1213051947498053_6055634957114202852_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_ohc=4NgvKk1Lm5cQ7kNvwHgROsa&_nc_oc=AdoXLLZeHEuCSas05oUiKTXu7w1QyPcG1Iav4OiMPjYqFA-aG1VBM6vFSp9Qs_q1wXM&_nc_zt=23&_nc_ht=scontent.fhyd11-1.fna&_nc_gid=Ascc3Fekvqd_io-kyvs0UA&_nc_ss=7a389&oh=00_Af21mN6Iq2XFY5xhZh05mws1rcbVIvwqFg2ryi-IFpnvCA&oe=69D2BF68", label: "Painting" },
   // { src: "https://scontent.fhyd14-3.fna.fbcdn.net/v/t1.6435-9/71284910_2453486168077939_4835319025590337536_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=7b2446&_nc_ohc=Lp-eRMWEwfcQ7kNvwEik1-v&_nc_oc=AdpAM5sxmdu6PA-dF2LUMfaqtCKCVnvuFOJ02R8A21-PkTsNJf21pF6RsaX4RVB9PiRMVTSSkVDY3eBw6WB6S1jG&_nc_zt=23&_nc_ht=scontent.fhyd14-3.fna&_nc_gid=OT91AITtAR7uJ7wAvHnTAg&_nc_ss=7a389&oh=00_AfxSu2UNRhWOnmgvKWUvmy4UNMeJUuGRBJZp-BV7pcSS6g&oe=69F377E6", label: "Painting" },
   // { src: "https://scontent.fhyd14-2.fna.fbcdn.net/v/t39.30808-6/494748818_1258981672905080_1204047423563521746_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=100&ccb=1-7&_nc_sid=a934a8&_nc_ohc=NVxVX9d202gQ7kNvwHjeV_1&_nc_oc=Ado0l5WLBjgH2EUoKKlm2N31nX68Va4meXtVml2TNcb-4Z2ztU7390VEjpaWAmVyrCxao4Fz2pvwl_gCwSUR0ckp&_nc_zt=23&_nc_ht=scontent.fhyd14-2.fna&_nc_gid=d0yaCm2-PiSafgZb_Grv5A&_nc_ss=7a389&oh=00_AfxOduQsS5HmmPlH43_Q0uZT4W4HGfmhlE1ICFbGv5azjA&oe=69D1BCC6", label: "Painting" },
@@ -94,10 +88,7 @@ const GALLERY_IMAGES = [
   { src: "https://scontent.fhyd14-2.fna.fbcdn.net/v/t39.30808-6/625330018_1503999585069953_3848974437494060330_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=108&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=bkly8qLMzDIQ7kNvwHxovLi&_nc_oc=AdpejixCZEyMNxKKlW_1LrbyBXkk-89pY4mK-JqLf2kfkoV6OvCv3TmS9tiXoIGVaVURL3Vp2_ejmIrR5ukyURm2&_nc_zt=23&_nc_ht=scontent.fhyd14-2.fna&_nc_gid=qCpcjtN7sZ_Qm4xUsHIVCA&_nc_ss=7a389&oh=00_AfyXRA27b6XoOxQ1W0cW6Nj6rvdGdQz8uVJQeatxPaZfNQ&oe=69D1DAEB", label: "Workshop" },
   { src: "https://scontent.fhyd14-5.fna.fbcdn.net/v/t39.30808-6/492356986_1251135083689739_1255324562041729510_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=105&ccb=1-7&_nc_sid=a934a8&_nc_ohc=r1xa1u5B4R0Q7kNvwGpDSMf&_nc_oc=AdpJ63T-tsO4MsDLotk0NKJZPGdS_z_GsGeN30BLaeBpLZC111Q1-0my1SGXxGHEn9O1aX6mlV4vdKVP6JZtrZ00&_nc_zt=23&_nc_ht=scontent.fhyd14-5.fna&_nc_gid=cCTrSx45MPPU87WkOHBO2Q&_nc_ss=7a389&oh=00_AfyPvR3KdWTCMmiOX0zTHe4Bk2K15EjfSVex4E_dzDKN_Q&oe=69D1C1C5", label: "Workshop" },
   { src: "https://lh3.googleusercontent.com/p/AF1QipO9M6t8cqUT14niDnEg1f9amr3rmdcVtiu4XbRo=w1024", label: "Workshop" },
-<<<<<<< HEAD
 
-=======
->>>>>>> e130932c44c11db80093fe8d5bae83e349055f43
 ];
 
 const FILTERS = ["All", "Painting", "Sketching", "Pottery", "Music", "Workshop"];
