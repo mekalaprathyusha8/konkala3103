@@ -102,7 +102,7 @@ const CoursesSection = ({ hideHeader }: { hideHeader?: boolean }) => {
                   <p className="mt-2 text-sm text-white/80 font-body">{course.desc}</p>
                   <button
                     onClick={() => { navigate("/gallery"); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-                    className="mt-4 text-sm font-button font-medium py-[0.4rem] px-5 rounded-full border-[1.5px] border-[#B7323C] bg-gradient-to-r from-[#B7323C]/20 to-transparent hover:bg-[#B7323C] text-white transition-colors duration-300"
+                    className="btn-gradient mt-4 text-sm py-2 px-5"
                   >
                     Show Details
                   </button>
