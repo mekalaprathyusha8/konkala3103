@@ -18,11 +18,11 @@ function AboutSection() {
           initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}
           style={{ textAlign: "center", marginBottom: "clamp(40px,6vh,64px)" }}
         >
-          <span style={{ display: "inline-block", fontFamily: "Poppins, sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.3em", textTransform: "uppercase", color: "#8B1E2D", background: "rgba(139,30,45,0.08)", border: "1.5px solid rgba(139,30,45,0.2)", borderRadius: 50, padding: "5px 18px", marginBottom: 14 }}>
-            Our Story
-          </span>
-          <h2 style={{ fontFamily: "Playfair Display, Georgia, serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", fontWeight: 900, color: "#5C0F1A", lineHeight: 1.2, maxWidth: 560, margin: "0 auto 12px" }}>
-            About <span style={{ background: "linear-gradient(135deg, #8B1E2D, #B7323C)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Konkala Fine Arts</span>
+          {/* <span style={{ display: "inline-block", fontFamily: "Poppins, sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.3em", textTransform: "uppercase", color: "#8B1E2D", background: "rgba(139,30,45,0.08)", border: "1.5px solid rgba(139,30,45,0.2)", borderRadius: 50, padding: "5px 18px", marginBottom: 14 }}>
+            Director's Note
+          </span> */}
+          <h2 style={{ fontFamily: "Playfair Display, Georgia, serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", fontWeight: 900, color: "#5C0F1A", lineHeight: 1.2, maxWidth: 800, margin: "0 auto 12px" }}>
+            About - <span style={{ background: "linear-gradient(135deg, #8B1E2D, #B7323C)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Konkala Fine Arts</span>
           </h2>
           <div style={{ display: "flex", alignItems: "center", gap: 8, justifyContent: "center" }}>
             <div style={{ width: 48, height: 2, background: "linear-gradient(90deg, transparent, #D4AF37)" }} />
@@ -31,11 +31,11 @@ function AboutSection() {
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
           {/* Founder image */}
           <motion.div
             initial={{ opacity: 0, x: -40 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.8 }}
-            style={{ display: "flex", justifyContent: "center" }}
+            style={{ display: "flex", justifyContent: "center", position: "sticky", top: "100px" }}
           >
             <div style={{ maxWidth: 420, width: "100%" }}>
               <div style={{
@@ -56,7 +56,7 @@ function AboutSection() {
                   Madhu Kuruva
                 </h3>
                 <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "0.9rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", margin: 0, color: "#8B1E2D" }}>
-                  Founder & Lead Art Instructor
+                  Director, Konkala Fine Arts
                 </p>
               </div>
             </div>
@@ -69,26 +69,35 @@ function AboutSection() {
           >
             <div style={{ marginBottom: 24, lineHeight: 1.8 }}>
               <p style={{ color: "#555", fontFamily: "Poppins, sans-serif", fontSize: "0.97rem", marginBottom: 14 }}>
-                Born in 1980, <strong style={{ color: "#8B1E2D" }}>Madhu Kuruva</strong> is a visual artist whose works merge tradition, culture, and spirituality with deep emotional resonance. He holds a BFA in Painting from Sri Venkateshwara College of Fine Arts, Hyderabad, and an MFA in Painting from Jawaharlal Nehru Architecture and Fine Arts University (JNAFAU).
+                <strong style={{ color: "#8B1E2D" }}>Konkala Fine Arts</strong> was established in 2023 with a deep-rooted vision to nurture creativity, preserve artistic traditions, and inspire individuals to discover their inner voice through art. Born from my own journey as an artist—from a small village to national and international platforms—this <em style={{ color: "#D4AF37", fontStyle: "normal", fontWeight: 600 }}>संस्था</em> (institution) stands as a bridge between raw passion and refined artistic expression.
               </p>
-              <div style={{ color: "#555", fontFamily: "Poppins, sans-serif", fontSize: "0.97rem", marginBottom: 14 }}>
-                His contributions have earned him several honors, including:
-                <ul style={{ listStyleType: "disc", paddingLeft: 20, marginTop: 8, display: "flex", flexDirection: "column", gap: 6, color: "#444" }}>
-                  <li><strong style={{ color: "#D4AF37" }}>Cash Award</strong> at the National Level Art Competition 2025, State Art Gallery.</li>
-                  <li><strong style={{ color: "#D4AF37" }}>Art Legend Award (2023)</strong>, Chitrakala Parishad, Amalapuram.</li>
-                  <li><strong style={{ color: "#D4AF37" }}>Spiritual India Award (2022)</strong>, Brahma Kumaris, Mount Abu.</li>
-                  <li><strong style={{ color: "#D4AF37" }}>At Grant Abstract art Winner</strong> and more….</li>
-                </ul>
+              
+              <p style={{ color: "#555", fontFamily: "Poppins, sans-serif", fontSize: "0.97rem", marginBottom: 24 }}>
+                Art, for me, is not merely a skill but a way of life—a language beyond words that connects emotion, culture, and consciousness. Konkala Fine Arts was created to offer that experience to every individual, regardless of age, background, or prior training.
+              </p>
+
+              <h4 style={{ fontFamily: "Playfair Display, serif", fontSize: "1.3rem", fontWeight: 700, color: "#5C0F1A", marginBottom: 10 }}>
+                Why Konkala Fine Arts?
+              </h4>
+              <p style={{ color: "#555", fontFamily: "Poppins, sans-serif", fontSize: "0.97rem", marginBottom: 10 }}>
+                In today’s fast-paced, screen-driven world, the connection to creativity is slowly fading. Konkala Fine Arts was founded to reawaken that connection—to provide a space where imagination breathes, hands create, and minds evolve.
+              </p>
+              <p style={{ color: "#555", fontFamily: "Poppins, sans-serif", fontSize: "0.97rem", marginBottom: 24 }}>
+                We believe that every individual carries an artist within. What they need is the right guidance, environment, and encouragement. This institution is dedicated to identifying and nurturing that hidden potential, transforming curiosity into creativity and creativity into mastery.
+              </p>
+
+              <div style={{ background: "rgba(212,175,55,0.08)", padding: "16px 24px", borderRadius: "0 16px 16px 16px", borderLeft: "4px solid #D4AF37", marginBottom: 24 }}>
+                <h4 style={{ fontFamily: "Playfair Display, serif", fontSize: "1.3rem", fontWeight: 700, color: "#5C0F1A", marginBottom: 8 }}>
+                  Our Motto
+                </h4>
+                <p style={{ color: "#8B1E2D", fontFamily: "Georgia, serif", fontSize: "1.1rem", fontStyle: "italic", margin: 0, fontWeight: 600 }}>
+                  “Art for Life – Awakening Creativity, Enriching Souls.”
+                </p>
               </div>
-              <p style={{ color: "#555", fontFamily: "Poppins, sans-serif", fontSize: "0.97rem", marginBottom: 14 }}>
-                Madhu Kuruva’s works have been showcased internationally at the San Francisco Fair (2024) and the LA Art Show “Align” exhibition, where he presented alongside artists from India and Los Angeles.
-              </p>
-              <p style={{ color: "#555", fontFamily: "Poppins, sans-serif", fontSize: "0.97rem" }}>
-                Beyond his artistic journey, he mentors young talents and actively engages in global art initiatives such as the Mazda Art Grant.
-              </p>
+
+
+
             </div>
-
-
           </motion.div>
         </div>
       </div>

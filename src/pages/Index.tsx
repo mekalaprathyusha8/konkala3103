@@ -12,6 +12,7 @@ import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import VisionMissionSection from "@/components/VisionMissionSection";
 
 const Index = () => {
   const [loading, setLoading] = useState(true);
@@ -28,6 +29,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <AboutSection />
+        <VisionMissionSection />
         <CoursesSection />
         <GallerySection />
         <WorkshopsSection />
