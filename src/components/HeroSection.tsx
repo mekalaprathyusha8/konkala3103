@@ -13,7 +13,7 @@ import img6 from "../assets/628038501_1505957138207531_3798120997786308507_n.jpg
 import img7 from "../assets/651044007_1535504571919454_8464848720093164676_n.jpg";
 import img8 from "../assets/hero-slide3-img4.jpg";
 import img9 from "../assets/hero-slide4-img1.jpg";
-import img10 from "../assets/images.jpg";
+import img10 from "../assets/sketching/new-sketch-dancer.jpg";
 import img11 from "../assets/hero-slide4-img3.jpg";
 import img12 from "../assets/student-painting-ganesha.jpg";
 import img13 from "../assets/student-sketch-1.jpg";
