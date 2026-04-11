@@ -37,7 +37,7 @@ const Footer = () => {
               <img src={logo} alt="Konkala Fine Arts" style={{ height: "4.5rem", objectFit: "contain", borderRadius: "10px", filter: "drop-shadow(0 2px 8px rgba(212,175,55,0.25))" }} />
             </button>
             <p style={{ color: "#FFFFFF", fontFamily: "Poppins, sans-serif", fontSize: "0.87rem", fontWeight: 700, lineHeight: 1.7, marginBottom: 14 }}>
-              Premier Arts & Music Academy in Madhapur, Hyderabad. Nurturing creativity and artistic excellence since 2014.
+              Premier Arts & Music Academy in Madhapur, Hyderabad. Nurturing creativity and artistic excellence since 2013.
             </p>
             <div style={{ display: "flex", alignItems: "center", gap: 8, color: "#E5E5E5" }}>
               <Clock size={15} style={{ color: "#D4AF37", flexShrink: 0 }} />

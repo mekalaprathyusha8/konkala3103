@@ -69,7 +69,7 @@ function AboutSection() {
           >
             <div style={{ marginBottom: 24, lineHeight: 1.8 }}>
               <p style={{ color: "#555", fontFamily: "Poppins, sans-serif", fontSize: "0.97rem", marginBottom: 14 }}>
-                <strong style={{ color: "#8B1E2D" }}>Konkala Fine Arts</strong> was established in 2023 with a deep-rooted vision to nurture creativity, preserve artistic traditions, and inspire individuals to discover their inner voice through art. Born from my own journey as an artist—from a small village to national and international platforms—this <em style={{ color: "#D4AF37", fontStyle: "normal", fontWeight: 600 }}>संस्था</em> (institution) stands as a bridge between raw passion and refined artistic expression.
+                <strong style={{ color: "#8B1E2D" }}>Konkala Fine Arts</strong> was established in 2013 with a deep-rooted vision to nurture creativity, preserve artistic traditions, and inspire individuals to discover their inner voice through art. Born from my own journey as an artist—from a small village to national and international platforms—this <em style={{ color: "#D4AF37", fontStyle: "normal", fontWeight: 600 }}>संस्था</em> (institution) stands as a bridge between raw passion and refined artistic expression.
               </p>
               
               <p style={{ color: "#555", fontFamily: "Poppins, sans-serif", fontSize: "0.97rem", marginBottom: 24 }}>

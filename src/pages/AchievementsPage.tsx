@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -10,8 +11,8 @@ import affiliationCert from "@/assets/affiliation-cert.jpg";
 import isoCert from "@/assets/iso-cert.jpg";
 import justdialCert from "@/assets/justdial-cert.jpg";
 import maxCert from "@/assets/max-certificate.jpg";
-import { motion } from "framer-motion";
-import { Trophy, Star, Users, BookOpen, Award, Heart, Globe, School } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Trophy, Star, Users, BookOpen, Award, Heart, Globe, School, X, ZoomIn } from "lucide-react";
 
 const milestones = [
   { year: "2013", title: "Academy Founded", desc: "Konkala Fine Arts established in Madhapur, Hyderabad with a vision to make quality art education accessible." },
@@ -24,7 +25,10 @@ const milestones = [
   { year: "2025", title: "20+ Schools Reached", desc: "Community art workshops expanded to 20+ schools across Hyderabad, inspiring thousands of young minds." },
 ];
 
-const AchievementsPage = () => (
+const AchievementsPage = () => {
+  const [lightbox, setLightbox] = useState<string | null>(null);
+
+  return (
   <>
     <Header />
     <PageWrapper page="achievements">
@@ -48,35 +52,59 @@ const AchievementsPage = () => (
               </h2>
             </motion.div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24, justifyItems: "center" }}>
+            <div className="cert-grid">
               <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-                style={{ background: "rgba(255,255,255,0.05)", padding: 16, borderRadius: 20, border: "1px solid rgba(212,175,55,0.3)", boxShadow: "0 8px 32px rgba(0,0,0,0.3)", maxWidth: 500, width: "100%", display: "flex", flexDirection: "column" }}>
-                <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                  <img src={affiliationCert} alt="Sarbabharatiya Sangeet-O-Sanskriti Parishad Affiliation" style={{ width: "100%", height: 320, objectFit: "contain", borderRadius: 12 }} />
+                style={{ background: "rgba(255,255,255,0.05)", padding: 16, borderRadius: 20, border: "1px solid rgba(212,175,55,0.3)", boxShadow: "0 8px 32px rgba(0,0,0,0.3)", maxWidth: 500, width: "100%", display: "flex", flexDirection: "column", cursor: "pointer", position: "relative" }}
+                className="cert-card"
+                onClick={() => setLightbox(affiliationCert)}
+                >
+                <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden", position: "relative", borderRadius: 12 }}>
+                  <img src={affiliationCert} alt="Sarbabharatiya Sangeet-O-Sanskriti Parishad Affiliation" style={{ width: "100%", height: 320, objectFit: "contain", transition: "transform 0.4s ease" }} className="cert-img" />
+                  <div className="cert-overlay" style={{ position: "absolute", inset: 0, background: "rgba(28,4,8,0.5)", display: "flex", alignItems: "center", justifyContent: "center", opacity: 0, transition: "opacity 0.3s" }}>
+                    <ZoomIn size={32} style={{ color: "#D4AF37" }} />
+                  </div>
                 </div>
                 <p style={{ color: "#F0D080", fontFamily: "Poppins, sans-serif", fontWeight: 600, textAlign: "center", marginTop: 16, fontSize: "1.1rem" }}>Affiliation Certificate</p>
               </motion.div>
 
               <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-                style={{ background: "rgba(255,255,255,0.05)", padding: 16, borderRadius: 20, border: "1px solid rgba(212,175,55,0.3)", boxShadow: "0 8px 32px rgba(0,0,0,0.3)", maxWidth: 500, width: "100%", display: "flex", flexDirection: "column" }}>
-                <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                  <img src={isoCert} alt="ISO 9001:2015 Certification" style={{ width: "100%", height: 320, objectFit: "contain", borderRadius: 12 }} />
+                style={{ background: "rgba(255,255,255,0.05)", padding: 16, borderRadius: 20, border: "1px solid rgba(212,175,55,0.3)", boxShadow: "0 8px 32px rgba(0,0,0,0.3)", maxWidth: 500, width: "100%", display: "flex", flexDirection: "column", cursor: "pointer", position: "relative" }}
+                className="cert-card"
+                onClick={() => setLightbox(isoCert)}
+                >
+                <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden", position: "relative", borderRadius: 12 }}>
+                  <img src={isoCert} alt="ISO 9001:2015 Certification" style={{ width: "100%", height: 320, objectFit: "contain", transition: "transform 0.4s ease" }} className="cert-img" />
+                  <div className="cert-overlay" style={{ position: "absolute", inset: 0, background: "rgba(28,4,8,0.5)", display: "flex", alignItems: "center", justifyContent: "center", opacity: 0, transition: "opacity 0.3s" }}>
+                    <ZoomIn size={32} style={{ color: "#D4AF37" }} />
+                  </div>
                 </div>
                  <p style={{ color: "#F0D080", fontFamily: "Poppins, sans-serif", fontWeight: 600, textAlign: "center", marginTop: 16, fontSize: "1.1rem" }}>ISO 9001:2015</p>
               </motion.div>
 
               <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}
-                style={{ background: "rgba(255,255,255,0.05)", padding: 16, borderRadius: 20, border: "1px solid rgba(212,175,55,0.3)", boxShadow: "0 8px 32px rgba(0,0,0,0.3)", maxWidth: 500, width: "100%", display: "flex", flexDirection: "column" }}>
-                <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                  <img src={justdialCert} alt="JustDial Certified 2020" style={{ width: "100%", height: 320, objectFit: "contain", borderRadius: 12 }} />
+                style={{ background: "rgba(255,255,255,0.05)", padding: 16, borderRadius: 20, border: "1px solid rgba(212,175,55,0.3)", boxShadow: "0 8px 32px rgba(0,0,0,0.3)", maxWidth: 500, width: "100%", display: "flex", flexDirection: "column", cursor: "pointer", position: "relative" }}
+                className="cert-card"
+                onClick={() => setLightbox(justdialCert)}
+                >
+                <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden", position: "relative", borderRadius: 12 }}>
+                  <img src={justdialCert} alt="JustDial Certified 2020" style={{ width: "100%", height: 320, objectFit: "contain", transition: "transform 0.4s ease" }} className="cert-img" />
+                  <div className="cert-overlay" style={{ position: "absolute", inset: 0, background: "rgba(28,4,8,0.5)", display: "flex", alignItems: "center", justifyContent: "center", opacity: 0, transition: "opacity 0.3s" }}>
+                    <ZoomIn size={32} style={{ color: "#D4AF37" }} />
+                  </div>
                 </div>
                 <p style={{ color: "#F0D080", fontFamily: "Poppins, sans-serif", fontWeight: 600, textAlign: "center", marginTop: 16, fontSize: "1.1rem" }}>JustDial 5 Stars</p>
               </motion.div>
 
               <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}
-                style={{ background: "rgba(255,255,255,0.05)", padding: 16, borderRadius: 20, border: "1px solid rgba(212,175,55,0.3)", boxShadow: "0 8px 32px rgba(0,0,0,0.3)", maxWidth: 500, width: "100%", display: "flex", flexDirection: "column" }}>
-                <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                  <img src={maxCert} alt="Max Kids Festival Certification" style={{ width: "100%", height: 320, objectFit: "cover", objectPosition: "center top", borderRadius: 12 }} />
+                style={{ background: "rgba(255,255,255,0.05)", padding: 16, borderRadius: 20, border: "1px solid rgba(212,175,55,0.3)", boxShadow: "0 8px 32px rgba(0,0,0,0.3)", maxWidth: 500, width: "100%", display: "flex", flexDirection: "column", cursor: "pointer", position: "relative" }}
+                className="cert-card"
+                onClick={() => setLightbox(maxCert)}
+                >
+                <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden", position: "relative", borderRadius: 12 }}>
+                  <img src={maxCert} alt="Max Kids Festival Certification" style={{ width: "100%", height: 320, objectFit: "contain", transition: "transform 0.4s ease" }} className="cert-img" />
+                  <div className="cert-overlay" style={{ position: "absolute", inset: 0, background: "rgba(28,4,8,0.5)", display: "flex", alignItems: "center", justifyContent: "center", opacity: 0, transition: "opacity 0.3s" }}>
+                    <ZoomIn size={32} style={{ color: "#D4AF37" }} />
+                  </div>
                 </div>
                 <p style={{ color: "#F0D080", fontFamily: "Poppins, sans-serif", fontWeight: 600, textAlign: "center", marginTop: 16, fontSize: "1.1rem" }}>Student Award</p>
               </motion.div>
@@ -129,6 +157,25 @@ const AchievementsPage = () => (
           </div>
         </section>
       </div>
+
+      <AnimatePresence>
+        {lightbox && (
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+            style={{ position: "fixed", inset: 0, background: "rgba(10,3,6,0.93)", zIndex: 1000, display: "flex", alignItems: "center", justifyContent: "center", padding: 20, backdropFilter: "blur(12px)" }}
+            onClick={() => setLightbox(null)}
+          >
+            <motion.div initial={{ scale: 0.85, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.85, opacity: 0 }} transition={{ type: "spring", damping: 25 }}
+              style={{ position: "relative", maxWidth: 600, width: "100%" }} onClick={e => e.stopPropagation()}
+            >
+              <img src={lightbox} alt="Certification" referrerPolicy="no-referrer"
+                style={{ width: "100%", maxHeight: "85vh", objectFit: "contain", borderRadius: 16, border: "2px solid rgba(212,175,55,0.3)", boxShadow: "0 32px 80px rgba(0,0,0,0.8)" }} />
+              <button onClick={() => setLightbox(null)} style={{ position: "absolute", top: -14, right: -14, width: 40, height: 40, borderRadius: "50%", background: "#8B1E2D", border: "2px solid rgba(212,175,55,0.4)", color: "#D4AF37", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}>
+                <X size={18} />
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </PageWrapper>
     <Footer />
     <WhatsAppButton />
@@ -138,14 +185,19 @@ const AchievementsPage = () => (
         .timeline-item { justify-content: flex-end !important; padding-left: 44px; }
         .timeline-item > div:last-child { width: 100% !important; }
         .timeline-item > div:first-child { left: 14px !important; }
+      }
       @media (min-width: 1024px) {
         .cert-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; justify-items: center; }
       }
       @media (max-width: 1023px) {
         .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; justify-items: center; }
       }
+      .cert-card:hover .cert-img { transform: scale(1.05); }
+      .cert-card:hover .cert-overlay { opacity: 1 !important; }
     `}</style>
   </>
-);
+  );
+};
 
 export default AchievementsPage;
+
