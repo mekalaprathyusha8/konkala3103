@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ZoomIn } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 const formatImages = (globConfig: Record<string, unknown>, label: string) => 
   Object.values(globConfig).map(mod => ({
     src: (mod as { default: string }).default,
@@ -21,7 +21,9 @@ const FILTERS = ["All", "Painting", "Sketching", "Pottery", "Music", "Workshop"]
 const LABEL_COLORS: Record<string, string> = { Painting: "#8B1E2D", Sketching: "#5C0F1A", Pottery: "#B7323C", Music: "#1E6B8B", Workshop: "#D4AF37" };
 
 const GallerySection = ({ hideHeader }: { hideHeader?: boolean }) => {
-  const [active, setActive] = useState("All");
+  const location = useLocation();
+  const initialFilter = (location.state as { filter?: string })?.filter || "All";
+  const [active, setActive] = useState(initialFilter);
   const [lightbox, setLightbox] = useState<string | null>(null);
   const navigate = useNavigate();
 

@@ -48,10 +48,10 @@ const courseGalleries: Record<string, string[]> = {
 };
 
 const courses = [
-  { title: "Painting Classes", desc: "Learn acrylic, watercolor, and oil painting techniques from beginner to advanced levels.", img: paintingImg },
-  { title: "Pencil Sketch Classes", desc: "Master pencil drawing, shading, and portrait sketching with professional guidance.", img: sketchCardImg },
-  { title: "Pottery Classes", desc: "Shape clay into beautiful pots, vases, and sculptures with hands-on pottery training.", img: potteryImg },
-  { title: "Music Classes", desc: "Learn music theory, rhythm, guitar, vocals and various instruments in a fun, supportive environment.", img: musicImg },
+  { title: "Painting Classes", desc: "Learn acrylic, watercolor, and oil painting techniques from beginner to advanced levels.", img: paintingImg, filter: "Painting" },
+  { title: "Pencil Sketch Classes", desc: "Master pencil drawing, shading, and portrait sketching with professional guidance.", img: sketchCardImg, filter: "Sketching" },
+  { title: "Pottery Classes", desc: "Shape clay into beautiful pots, vases, and sculptures with hands-on pottery training.", img: potteryImg, filter: "Pottery" },
+  { title: "Music Classes", desc: "Learn music theory, rhythm, guitar, vocals and various instruments in a fun, supportive environment.", img: musicImg, filter: "Music" },
 ];
 
 const CoursesSection = ({ hideHeader }: { hideHeader?: boolean }) => {
@@ -101,7 +101,7 @@ const CoursesSection = ({ hideHeader }: { hideHeader?: boolean }) => {
                   <h3 className="font-heading font-bold text-lg text-white">{course.title}</h3>
                   <p className="mt-2 text-sm text-white/80 font-body">{course.desc}</p>
                   <button
-                    onClick={() => { navigate("/gallery"); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+                    onClick={() => { navigate("/gallery", { state: { filter: course.filter } }); window.scrollTo({ top: 0, behavior: "smooth" }); }}
                     className="btn-gradient mt-4 text-sm py-2 px-5"
                   >
                     Show Details

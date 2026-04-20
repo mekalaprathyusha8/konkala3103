@@ -41,7 +41,7 @@ const Footer = () => {
             </p>
             <div style={{ display: "flex", alignItems: "center", gap: 8, color: "#E5E5E5" }}>
               <Clock size={15} style={{ color: "#D4AF37", flexShrink: 0 }} />
-              <span style={{ fontFamily: "Poppins, sans-serif", fontSize: "0.83rem", fontWeight: 700, color: "#FFFFFF" }}>Mon–Sat: 10:00 AM – 9:00 PM</span>
+              <span style={{ fontFamily: "Poppins, sans-serif", fontSize: "0.83rem", fontWeight: 700, color: "#FFFFFF" }}>Mon–Sun: 10:00 AM – 9:00 PM</span>
             </div>
           </div>
 
