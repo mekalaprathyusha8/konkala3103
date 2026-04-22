@@ -18,8 +18,8 @@ import img11 from "../assets/hero-slide4-img3.jpg";
 import img12 from "../assets/student-painting-ganesha.jpg";
 import img13 from "../assets/student-sketch-1.jpg";
 // New hero images from academy photos
-import imgHero1 from "../assets/hero-pottery-wheel.jpg";
-import imgHero2 from "../assets/hero-ganesha-painting.jpg";
+import imgHero1 from "../assets/WhatsApp Image 2026-04-03 at 3.55.00 PM.jpeg";
+import imgHero2 from "../assets/ext-image-34.jpg";
 import imgHero3 from "../assets/hero-students-art.jpg";
 import imgHero4 from "../assets/hero-art-studio.jpg";
 

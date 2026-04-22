@@ -81,9 +81,9 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="mailto:artistmadhukuruva@gmail.com" style={{ display: "flex", alignItems: "center", gap: 10, color: "#FFFFFF", textDecoration: "none", fontFamily: "Poppins, sans-serif", fontSize: "0.85rem", fontWeight: 700, transition: "color 0.2s" }} className="footer-link">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=konkalafinearts@gmail.com" target="_blank" rel="noreferrer" style={{ display: "flex", alignItems: "center", gap: 10, color: "#FFFFFF", textDecoration: "none", fontFamily: "Poppins, sans-serif", fontSize: "0.85rem", fontWeight: 700, transition: "color 0.2s" }} className="footer-link">
                   <Mail size={15} style={{ color: "#D4AF37", flexShrink: 0 }} />
-                  artistmadhukuruva@gmail.com
+                  konkalafinearts@gmail.com
                 </a>
               </li>
             </ul>

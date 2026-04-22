@@ -12,7 +12,7 @@ const GALLERY_IMAGES = [
   ...formatImages(import.meta.glob('@/assets/painting/*.{jpg,jpeg,png,webp,avif}', { eager: true }), "Painting"),
   ...formatImages(import.meta.glob('@/assets/pottery/*.{jpg,jpeg,png,webp,avif}', { eager: true }), "Pottery"),
   ...formatImages(import.meta.glob('@/assets/sketching/*.{jpg,jpeg,png,webp,avif}', { eager: true }), "Sketching"),
-  ...formatImages(import.meta.glob('@/assets/music/*.{jpg,jpeg,png,webp,avif}', { eager: true }), "Music"),
+  ...formatImages(import.meta.glob('@/assets/music/*.{jpg,jpeg,png,webp,avif}',  { eager: true }), "Music"),
   ...formatImages(import.meta.glob('@/assets/workshop/*.{jpg,jpeg,png,webp,avif}', { eager: true }), "Workshop"),
 ];
 
