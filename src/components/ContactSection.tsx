@@ -21,8 +21,8 @@ const contactItems = [
   {
     icon: Mail,
     title: "Email Us",
-    content: "artistmadhukuruva@gmail.com",
-    href: "mailto:artistmadhukuruva@gmail.com",
+    content: "konkalafinearts@gmail.com",
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=konkalafinearts@gmail.com",
     isLink: true,
   },
   {
