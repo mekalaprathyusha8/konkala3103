@@ -8,12 +8,12 @@ const faqs = [
   { q: "What facilities are available for students?", a: "Our academy features modern art studios with natural lighting, pottery wheels,  music rooms with instruments, and a gallery space for student exhibitions." },
   { q: "Who are the instructors and faculty members?", a: "Our team consists of experienced professional artists and musicians led by founder Madhu Kuruva, each with years of teaching experience and recognized certifications in their respective fields." },
   { q: "Are there opportunities for exhibitions and collaborations?", a: "Yes! We regularly organize art exhibitions, competitions, workshops, and cultural events where students can showcase their talents. We also participate in national and international art contests." },
-  { q: "How flexible is the curriculum?", a: "We offer weekday and weekend batches with flexible timing from 9 AM to 9 PM (Monday–Saturday). Students can choose beginner to advanced programs based on their skill level." },
+  { q: "How flexible is the curriculum?", a: "We offer weekday and weekend batches with flexible timing from 10 AM to 9 PM (Monday–Sunday). Students can choose beginner to advanced programs based on their skill level." },
   { q: "Are there workshops or guest lectures?", a: "Yes, we conduct monthly workshops, seasonal art camps, and invite guest artists for special sessions and masterclasses throughout the year." },
   { q: "What career opportunities are available after completing courses?", a: "Students can pursue careers in fine arts, design, music, art education, digital media, art therapy, museum curation, and more. We also prepare students for recognized certifications like BFA and MFA." },
   { q: "What age groups do you accept?", a: "We welcome students from age 5 to any age. Our programs are designed to suit different age groups with age-appropriate teaching methods and curriculum." },
   { q: "Do you provide materials and instruments?", a: "Yes, all necessary art materials, paints, canvases, pottery tools, and musical instruments are provided during classes. Students can also bring their own materials if they prefer." },
-  { q: "What are the batch timings?", a: "We operate from 9:00 AM to 9:00 PM, Monday through Saturday. Multiple batch timings are available — morning, afternoon, and evening — to suit your schedule." },
+  { q: "What are the batch timings?", a: "We operate from 10:00 AM to 9:00 PM, Monday through Sunday. Multiple batch timings are available — morning, afternoon, and evening — to suit your schedule." },
   { q: "Do you offer online classes?", a: "Currently, we focus on in-person classes to provide hands-on experience. However, we occasionally conduct online workshops and sessions for students who cannot visit the academy." },
 ];
 

@@ -16,7 +16,13 @@ const courses = [
   "Fabric Painting",
   "Glass Painting",
   "Sketching",
-  "Long Term Course"
+  "Long Term Course",
+  "Guitar",
+  "Keyboard",
+  "Hindustani Vocal",
+  "Carnatic Vocal",
+  "Pottery",
+  "Other"
 ];
 const batches = ["Morning (9 AM - 12 PM)", "Afternoon (12 PM - 4 PM)", "Evening (4 PM - 7 PM)", "Late Evening (7 PM - 9 PM)"];
 

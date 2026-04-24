@@ -82,12 +82,12 @@ const GallerySection = ({ hideHeader }: { hideHeader?: boolean }) => {
           </AnimatePresence>
         </motion.div>
 
-        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.4 }} style={{ textAlign: "center", marginTop: 36 }}>
+        {/* <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.4 }} style={{ textAlign: "center", marginTop: 36 }}>
           <button onClick={() => navigate("/gallery")} className="gallery-view-btn"
             style={{ background: "linear-gradient(135deg, #5C0F1A, #8B1E2D)", color: "#D4AF37", border: "2px solid rgba(212,175,55,0.5)", borderRadius: 50, padding: "13px 36px", fontFamily: "Poppins, sans-serif", fontWeight: 700, fontSize: "0.9rem", cursor: "pointer", letterSpacing: "0.05em", transition: "all 0.25s", boxShadow: "0 4px 20px rgba(139,30,45,0.3)" }}>
             View Full Gallery →
           </button>
-        </motion.div>
+        </motion.div> */}
       </div>
 
       <AnimatePresence>
