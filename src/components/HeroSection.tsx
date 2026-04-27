@@ -3,32 +3,30 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-// Imported images from assets
-import img1 from "../assets/492356986_1251135083689739_1255324562041729510_n.jpg";
-import img2 from "../assets/495293089_1258981669571747_4693515321883132767_n.jpg";
-import img3 from "../assets/546592938_1373223274814252_7216387905622457055_n.jpg";
-import img4 from "../assets/hero-slide2-img4.jpg";
-import img5 from "../assets/627196450_1503946931741885_3731461679605161424_n.jpg";
-import img6 from "../assets/628038501_1505957138207531_3798120997786308507_n.jpg";
-import img7 from "../assets/651044007_1535504571919454_8464848720093164676_n.jpg";
-import img8 from "../assets/hero-slide3-img4.jpg";
-import img9 from "../assets/hero-slide4-img1.jpg";
-import img10 from "../assets/sketching/new-sketch-dancer.jpg";
-import img11 from "../assets/hero-slide4-img3.jpg";
-import img12 from "../assets/student-painting-ganesha.jpg";
-import img13 from "../assets/student-sketch-1.jpg";
-// New hero images from academy photos
-import imgHero1 from "../assets/WhatsApp Image 2026-04-03 at 3.55.00 PM.jpeg";
-import imgHero2 from "../assets/ext-image-34.jpg";
-import imgHero3 from "../assets/hero-students-art.jpg";
-import imgHero4 from "../assets/hero-art-studio.jpg";
+// Imported images from assets/hero
+import img1 from "../assets/hero/1.jpg";
+import img2 from "../assets/hero/2.jpg";
+import img3 from "../assets/hero/2.png";
+import img4 from "../assets/hero/2020-11-17 (1).png";
+import img5 from "../assets/hero/4.png";
+import img6 from "../assets/hero/DSC_0004.jpg";
+import img7 from "../assets/hero/DSC_0005.jpg";
+import img8 from "../assets/hero/DSC_0006.jpg";
+import img9 from "../assets/hero/DSC_0050.jpg";
+import img10 from "../assets/hero/DSC_0060.jpg";
+import img11 from "../assets/hero/DSC_0065.jpg";
+import img12 from "../assets/hero/DSC_0071.jpg";
+import img13 from "../assets/hero/hero-art-studio.jpg";
+import img14 from "../assets/hero/hero-slide2-img4.jpg";
+import img15 from "../assets/hero/hero-slide4-img1.jpg";
+import img16 from "../assets/hero/new-sketch-dancer.jpg";
 
-// 4 slides of 4 images each (16 total) — includes new real academy photos
+// 4 slides of 4 images each (16 total)
 const SLIDES = [
-  [imgHero1, imgHero2, imgHero3, imgHero4],
   [img1, img2, img3, img4],
   [img5, img6, img7, img8],
   [img9, img10, img11, img12],
+  [img13, img14, img15, img16],
 ];
 
 const SLIDE_MS = 5000; // 5 seconds as requested
